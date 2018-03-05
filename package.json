@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "vue": "^2.5.13"
   },
   "devDependencies": {
