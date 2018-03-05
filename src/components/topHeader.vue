@@ -8,6 +8,9 @@
       Mark Text is a Markdown editor for Mac, It is a concise text editor, dedicated to improving your editing efficiency.
     </div>
     <a href="https://github.com/marktext/marktext/releases" target="blank">Download for Mac</a>
+    <div href="https://github.com/marktext/marktext" class="github">
+      <a href="https://github.com/marktext/marktext" target="blank"><img src="../assets/icons/github.svg"/></a>
+    </div>
   </div>
 </template>
 
@@ -31,6 +34,20 @@
 </script>
 
 <style scoped>
+  .github {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    transition: all .3s ease-in-out;
+  }
+  .github img {
+    width: 100%;
+  }
+  .github:hover {
+    transform: scale(1.1);
+  }
   .top-header {
     text-align: center;
   }

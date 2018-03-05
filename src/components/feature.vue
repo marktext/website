@@ -30,7 +30,7 @@
 
 <style scoped>
   .features {
-    width: 1000px;
+    max-width: 1000px;
     margin: 100px auto;
   }
   h2 {

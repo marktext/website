@@ -60,7 +60,7 @@
     line-height: 1.6;
   }
   .theme-container {
-    width: 800px;
+    max-width: 800px;
     border: 1px solid #efefef;
     margin: 0 auto;
   }
