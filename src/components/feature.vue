@@ -4,7 +4,7 @@
     <div class="intro">
       Mark Text support CommonMark Spec and GitHub Flavored Markdown Spec. And it is a realtime preview eidtor, what you type is what you see finally.
     </div>
-    <ul>
+    <ul class="feature-intro">
       <li>
         <h3>GitHub Flavored Markdown</h3>
         <img src="../assets/images/table.jpg" alt="">
@@ -47,6 +47,7 @@
   }
   ul {
     display: flex;
+    align-content: space-between;
     margin-top: 80px;
   }
   li {
@@ -71,5 +72,13 @@
     font-size: 14px;
     color: #666;
     margin-top: 10px;
+  }
+  @media screen and (max-width: 850px) {
+    ul.feature-intro {
+      flex-direction: column;
+    }
+    ul.feature-intro li {
+      margin-right: 40px;
+    }
   }
 </style>

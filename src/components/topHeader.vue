@@ -65,7 +65,7 @@
     width: 100%;
   }
   .text {
-    width: 39rem;
+    max-width: 39rem;
     font-size: 1.25rem;
     line-height: 1.6;
     color: #303133;
