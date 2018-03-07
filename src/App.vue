@@ -8,7 +8,9 @@
     <theme></theme>
     <mode></mode>
     <footer>
-      <div>© 2017 - 2018 <a href="https://github.com/Jocs" target="blank">@jocs</a>.</div>
+      <div>© 2017 - 2018 <a href="https://github.com/Jocs" target="blank">@jocs</a>.
+        <a href="https://pan.baidu.com/s/1d8D0LahW-eH4CN-hdDiT2g">百度网盘下载</a>
+      </div>
     </footer>
   </div>
 </template>
@@ -53,7 +55,7 @@ export default {
     box-sizing: border-box;
   }
   footer div {
-    width: 200px;
+    width: 300px;
     height: 35px;
     line-height: 35px;
     text-align: center;
