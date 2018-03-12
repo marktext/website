@@ -17,7 +17,7 @@
       If you find any bugs of Mark Text, or have a great idea want to tell us ?
     </div>
     <div class="center issue-button">
-      <a href="https://github.com/marktext/marktext/issues" target="blank">Shot an Issue</a>
+      <a href="https://github.com/marktext/marktext/issues" target="blank">Shoot an Issue</a>
     </div>
   </div>
 </template>
