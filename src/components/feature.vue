@@ -2,7 +2,7 @@
   <div class="features">
     <h2>Editor</h2>
     <div class="intro">
-      Mark Text support CommonMark Spec and GitHub Flavored Markdown Spec. And it is a realtime preview eidtor, what you type is what you see finally.
+      Mark Text support CommonMark Spec and GitHub Flavored Markdown Spec. And it is a realtime preview editor, what you type is what you see finally.
     </div>
     <ul class="feature-intro">
       <li>
