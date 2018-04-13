@@ -2,7 +2,7 @@
   <div class="edit-mode">
     <h2>Edit Mode</h2>
     <div class="intro">
-      Various edit mode: Source Code mode、Typewriter mode、Focus mode.
+      Various edit modes: Source Code mode, Typewriter mode, and Focus mode.
     </div>
     <h3>Source Code Mode</h3>
     <div class="image-wrapper">
@@ -14,7 +14,7 @@
     </div>
     <h2>Issues</h2>
     <div class="intro center">
-      If you find any bugs of Mark Text, or have a great idea want to tell us ?
+      If you find any bugs or have a great idea for Mark Text, please let us know!
     </div>
     <div class="center issue-button">
       <a href="https://github.com/marktext/marktext/issues" target="blank">Shoot an Issue</a>
