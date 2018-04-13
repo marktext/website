@@ -18,7 +18,7 @@
       <li>
         <h3>Code Fence</h3>
         <img src="../assets/images/code-block.jpg" alt="">
-        <div>Support all the popular language</div>
+        <div>Support for all the popular languages</div>
       </li>
     </ul>
   </div>
