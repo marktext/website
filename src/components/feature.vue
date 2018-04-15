@@ -2,7 +2,7 @@
   <div class="features">
     <h2>Editor</h2>
     <div class="intro">
-      Mark Text support CommonMark Spec and GitHub Flavored Markdown Spec. And it is a realtime preview editor, what you type is what you see finally.
+      Mark Text supports both the CommonMark Spec and the GitHub Flavored Markdown Spec. It is a realtime preview editor: text styles and formatting update as you type.
     </div>
     <ul class="feature-intro">
       <li>
@@ -18,7 +18,7 @@
       <li>
         <h3>Code Fence</h3>
         <img src="../assets/images/code-block.jpg" alt="">
-        <div>Support all the popular language</div>
+        <div>Support for all the popular languages</div>
       </li>
     </ul>
   </div>
