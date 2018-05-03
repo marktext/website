@@ -2,7 +2,7 @@
   <div class="features">
     <h2>Editor</h2>
     <div class="intro">
-      Mark Text supports both the CommonMark Spec and the GitHub Flavored Markdown Spec. It is a realtime preview editor: text styles and formatting update as you type.
+      Mark Text supports both the CommonMark Spec and the GitHub Flavored Markdown Spec. Because Mark Text is a realtime preview editor text styles and formatting update automatically as you type.
     </div>
     <ul class="feature-intro">
       <li>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  
+
 </script>
 
 <style scoped>
