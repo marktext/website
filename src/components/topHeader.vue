@@ -11,6 +11,7 @@
     <div href="https://github.com/marktext/marktext" class="github">
       <a href="https://github.com/marktext/marktext" target="blank"><img src="../assets/icons/github.svg"/></a>
     </div>
+    <a href="https://issuehunt.io/repos/110446844" target="_blank" style="border: none;width: 84px; height: 100px; margin: 0; position: absolute; top: 50px; right: 0px; z-index: 9999; background: transparent url('https://issuehunt.io/static/embed/issuehunt-ribbon-v1.svg') 140% center no-repeat"></a>
   </div>
 </template>
 

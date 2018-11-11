@@ -9,7 +9,6 @@
     <mode></mode>
     <footer>
       <div>© 2017 - 2018 <a href="https://github.com/Jocs" target="blank">@jocs</a>.
-        <a href="https://pan.baidu.com/s/1d8D0LahW-eH4CN-hdDiT2g">百度网盘下载</a>
       </div>
     </footer>
   </div>
