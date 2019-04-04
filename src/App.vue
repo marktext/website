@@ -8,7 +8,7 @@
     <theme></theme>
     <mode></mode>
     <footer>
-      <div>© 2017 - 2018 <a href="https://github.com/Jocs" target="blank">@jocs</a>.
+      <div>© 2017 - 2019 <a href="https://github.com/Jocs" target="blank">@jocs</a>.
       </div>
     </footer>
   </div>
