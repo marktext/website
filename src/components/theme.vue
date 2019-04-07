@@ -8,18 +8,74 @@
         <span class="dot green"></span>
         <span class="feature-name">title</span>
       </div>
+      <div v-html="html"></div>
     </div>
     <div class="theme-list">
-      hello world
+      <div class="light-themes">
+        <h5>Light themes</h5>
+        <ul>
+          <li v-for="theme of lightThemes" :key="theme.name">
+            <span :style="{background: theme.color, 'box-shadow': `0 3px 12px 0 ${theme.color}`}"></span>
+            <span>{{theme.name}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="dark-themes">
+        <h5>Dark themes</h5>
+        <ul>
+          <li v-for="theme of darkThemes" :key="theme.name">
+            <span :style="{background: theme.color, 'box-shadow': `0 3px 12px 0 ${theme.color}`}"></span>
+            <span>{{theme.name}}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import html from './article.html'
+import 'katex/dist/katex.min.css'
+
+const lightThemes = [{
+  name: 'Cadmium Light',
+  label: 'cadmium',
+  color: 'rgba(33, 181, 111, 1)'
+}, {
+  name: 'Graphite Light',
+  label: 'graphite',
+  color: 'rgb(104, 134, 170)'
+}, {
+  name: 'Ulysses Light',
+  label: 'ulysses',
+  color: 'rgb(12, 139, 186)'
+}]
+
+const darkThemes = [{
+  name: 'Dark',
+  label: 'dark',
+  color: '#409eff'
+}, {
+  name: 'Material Dark',
+  label: 'material',
+  color: '#f48237'
+}, {
+  name: 'One Dark',
+  label: 'cadmium',
+  color: '#e2c08d'
+}]
+
 export default {
-  name: 'Theme'
+  name: 'Theme',
+  data () {
+    this.html = html
+    this.darkThemes = darkThemes
+    this.lightThemes = lightThemes
+    return {}
+  }
 }
 </script>
 <style scoped>
+  @import url("../themes/default.css");
   .theme {
     width: 100vw;
     height: 100vh;
@@ -72,6 +128,53 @@ export default {
     text-align: center;
     font-size: 12px;
     line-height: 32px;
+  }
+  .theme-list {
+    padding: 150px 50px 0 50px;
+    flex: 1;
+    color: #666;
+  }
+  .theme-list h5 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .light-themes,
+  .dark-themes {
+    margin-top: 50px;
+  }
+  .light-themes ul,
+  .dark-themes ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .theme-list li {
+    width: 150px;
+    height: 40px;
+    padding: 5px 8px 5px 30px;
+    margin-right: 20px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .theme-list li.active {
+    background: linear-gradient(30deg, #efefef, rgba(245, 245, 245, .2));
+    color: var(--themeColor);
+  }
+  .theme-list li > span:first-of-type {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: absolute;
+    left: 5px;
+    top: 10px;
   }
 </style>
 
