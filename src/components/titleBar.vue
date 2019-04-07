@@ -9,6 +9,10 @@
         <a href="javascript:;">Features</a>
         <a href="javascript:;">Themes</a>
         <a href="javascript:;">Sponsors</a>
+        <a href="https://github.com/marktext/marktext" target="_blank">
+          <img src="../assets/github.svg" alt="">
+          <span>GitHub</span>
+        </a>
       </div>
     </div>
     <div class="title-content">
@@ -103,6 +107,13 @@ export default {
     line-height: 30px;
     margin-right: 30px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  .nav .nav-group a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
   }
   .nav .nav-group a:hover {
     color: var(--themeColor);

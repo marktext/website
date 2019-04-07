@@ -112,6 +112,9 @@ export default {
   }
   .feature-list .description {
     font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .feature-images {
     flex: 0;
