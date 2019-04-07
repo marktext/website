@@ -1,27 +1,27 @@
 <template>
   <div id="app">
     <TitleBar></TitleBar>
+    <Feature></Feature>
   </div>
 </template>
 
 <script>
 import TitleBar from './components/titleBar.vue'
+import Feature from './components/feature.vue'
+import './app.global.css'
 
 export default {
   name: 'app',
   components: {
-    TitleBar
+    TitleBar,
+    Feature
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
