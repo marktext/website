@@ -150,7 +150,7 @@ li.task-list-item > input[type=checkbox] {
   width: 16px;
   height: 16px;
   margin: 4px 0px 0px;
-  top: 2px;
+  top: -1px;
   left: -22px;
   transform-origin: center;
   transform: rotate(-90deg);

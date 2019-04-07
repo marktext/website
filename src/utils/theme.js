@@ -33,7 +33,7 @@ export const addThemeStyle = theme => {
       themeStyleEle.innerHTML = patchTheme(oneDark())
       break
     default:
-      console.log('unknown theme')
+      // console.log('unknown theme')
       break
   }
 }
