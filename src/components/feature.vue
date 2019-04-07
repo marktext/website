@@ -100,14 +100,18 @@ export default {
     margin-bottom: 20px;
     border-radius: 8px;
     padding: 8px 10px;
+    color: #666;
   }
   .feature-list li.active {
     background: linear-gradient(30deg, #efefef, rgba(245, 245, 245, .2));
+    color: var(--themeColor);
   }
   .feature-list .title {
     font-size: 26px;
     font-weight: 600;
-    color: #666;
+  }
+  .feature-list .description {
+    font-size: 16px;
   }
   .feature-images {
     flex: 0;
