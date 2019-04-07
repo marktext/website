@@ -17,8 +17,8 @@
     </div>
     <div class="title-content">
       <div class="des">
-        <div class="slogan">Simple and Elegant Markdown Editor</div>
-        <div class="slogan">Focused on speed and usability.</div>
+        <div class="slogan-text">Simple and Elegant Markdown Editor</div>
+        <div class="slogan-text">Focused on speed and usability.</div>
         <div class="download-group">
           <div class="download-info">Available for maxOs, Windows and Linux.</div>
           <div class="button-group">
@@ -74,6 +74,7 @@ export default {
     background: rgba(255, 255, 255, .5);
     height: 60px;
     display: flex;
+    z-index: 10;
     justify-content: space-between;
   }
   .nav h1 {
@@ -130,7 +131,7 @@ export default {
     font-size: 30px;
     flex-shrink: 0;
   }
-  .des .slogan {
+  .des .slogan-text {
     text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
   }
   .des div:first-of-type {

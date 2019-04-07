@@ -1,5 +1,6 @@
 <template>
   <div class="feature">
+    <h2 class="slogan">&lt; Features /&gt;</h2>
     <div class="feature-list">
       <ul>
         <li v-for="feature in features" :key="feature.title"
@@ -71,9 +72,22 @@ export default {
   }
 }
 </script>
+<style>
+.slogan {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  color: var(--themeColor);
+  border-bottom: 2px var(--highlightColor) dashed;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+</style>
 
 <style scoped>
   .feature {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background: rgba(245, 245, 245, .6);

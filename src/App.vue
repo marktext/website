@@ -3,6 +3,7 @@
     <TitleBar></TitleBar>
     <Feature></Feature>
     <Theme></Theme>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import TitleBar from './components/titleBar.vue'
 import Feature from './components/feature.vue'
 import Theme from './components/theme.vue'
+import Footer from './components/footer.vue'
 import './app.global.css'
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     TitleBar,
     Feature,
-    Theme
+    Theme,
+    Footer
   }
 }
 </script>
