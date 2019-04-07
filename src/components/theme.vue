@@ -14,7 +14,10 @@
       <div class="light-themes">
         <h5>Light themes</h5>
         <ul>
-          <li v-for="theme of lightThemes" :key="theme.name">
+          <li v-for="theme of lightThemes" :key="theme.name"
+            :class="{active: theme.name === currentTheme.name}"
+            @click="selectTheme(theme)"
+          >
             <span :style="{background: theme.color, 'box-shadow': `0 3px 12px 0 ${theme.color}`}"></span>
             <span>{{theme.name}}</span>
           </li>
@@ -23,7 +26,10 @@
       <div class="dark-themes">
         <h5>Dark themes</h5>
         <ul>
-          <li v-for="theme of darkThemes" :key="theme.name">
+          <li v-for="theme of darkThemes" :key="theme.name"
+            :class="{active: theme.name === currentTheme.name}"
+            @click="selectTheme(theme)"
+          >
             <span :style="{background: theme.color, 'box-shadow': `0 3px 12px 0 ${theme.color}`}"></span>
             <span>{{theme.name}}</span>
           </li>
@@ -34,11 +40,12 @@
 </template>
 <script>
 import html from './article.html'
+import { addThemeStyle } from '../utils/theme.js'
 import 'katex/dist/katex.min.css'
 
 const lightThemes = [{
   name: 'Cadmium Light',
-  label: 'cadmium',
+  label: 'light',
   color: 'rgba(33, 181, 111, 1)'
 }, {
   name: 'Graphite Light',
@@ -56,11 +63,11 @@ const darkThemes = [{
   color: '#409eff'
 }, {
   name: 'Material Dark',
-  label: 'material',
+  label: 'material-dark',
   color: '#f48237'
 }, {
   name: 'One Dark',
-  label: 'cadmium',
+  label: 'one-dark',
   color: '#e2c08d'
 }]
 
@@ -70,7 +77,15 @@ export default {
     this.html = html
     this.darkThemes = darkThemes
     this.lightThemes = lightThemes
-    return {}
+    return {
+      currentTheme: lightThemes[0]
+    }
+  },
+  methods: {
+    selectTheme (theme) {
+      addThemeStyle(theme.label)
+      this.currentTheme = theme
+    }
   }
 }
 </script>
@@ -89,13 +104,14 @@ export default {
     width: 200px;
     height: 200px;
     position: absolute;
-    right: 200px;
-    top: 50px;
+    right: 320px;
+    top: 100px;
   }
   .app-container {
     width: 600px;
     height: 500px;
-    background: #fff;
+    background: var(--editorBgColor);
+    color: var(--editorColor);
     border-radius: 5px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
   }
@@ -161,6 +177,7 @@ export default {
     line-height: 30px;
     cursor: pointer;
     border-radius: 5px;
+    user-select: none;
   }
   .theme-list li.active {
     background: linear-gradient(30deg, #efefef, rgba(245, 245, 245, .2));

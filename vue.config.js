@@ -12,6 +12,17 @@ module.exports = {
       .use('raw-loader')
         .loader('raw-loader')
         .end()
+
+    // config.module
+    //   .rule('themeCss')
+    //   .test(/theme\.css$/)
+    //   .use('to-string-loader')
+    //     .loader('to-string-loader')
+    //     .end()
+    //   .use('css-loader')
+    //     .loader('css-loader')
+    //     .end()
+
     // const svgRule = config.module.rule('svg')
 
     // // clear all existing loaders.
