@@ -1,6 +1,6 @@
 <template>
   <div class="feature">
-    <h2 class="slogan">&lt; Features /&gt;</h2>
+    <h2 class="slogan" id="features">&lt; Features /&gt;</h2>
     <div class="feature-list">
       <ul>
         <li v-for="feature in features" :key="feature.title"
@@ -143,6 +143,7 @@ export default {
   }
   .app-container article.markdown-body p img {
     width: 100%;
+    border-radius: 4px;
   }
 </style>
 

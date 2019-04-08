@@ -112,7 +112,7 @@ const rendererConfig = {
         ]
       },
       {
-        test: /\.(image\.svg|png|jpe?g|gif)(\?.*)?$/,
+        test: /\.(webp|image\.svg|png|jpe?g|gif)(\?.*)?$/,
         use: {
           loader: 'url-loader',
           query: {

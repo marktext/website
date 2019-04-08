@@ -3,6 +3,7 @@
     <TitleBar></TitleBar>
     <Feature></Feature>
     <Theme></Theme>
+    <Sponsor></Sponsor>
     <Footer></Footer>
   </div>
 </template>
@@ -11,6 +12,7 @@
 import TitleBar from './components/titleBar.vue'
 import Feature from './components/feature.vue'
 import Theme from './components/theme.vue'
+import Sponsor from './components/sponsor.vue'
 import Footer from './components/footer.vue'
 import './app.global.css'
 
@@ -20,7 +22,8 @@ export default {
     TitleBar,
     Feature,
     Theme,
-    Footer
+    Footer,
+    Sponsor
   }
 }
 </script>

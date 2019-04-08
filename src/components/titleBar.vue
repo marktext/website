@@ -6,9 +6,9 @@
         Mark Text
       </h1>
       <div class="nav-group">
-        <a href="javascript:;">Features</a>
-        <a href="javascript:;">Themes</a>
-        <a href="javascript:;">Sponsors</a>
+        <a href="javascript:;" @click="scrollTo('#features')">Features</a>
+        <a href="javascript:;" @click="scrollTo('#themes')">Themes</a>
+        <a href="javascript:;" @click="scrollTo('#sponsors')">Sponsors</a>
         <a href="https://github.com/marktext/marktext" target="_blank">
           <svg :viewBox="GitHubIcon.viewBox" aria-hidden="true" class="icon">
             <use :xlink:href="GitHubIcon.url" />
@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import scrollToElement from '../utils/scrollTo.js'
 import GitHubIcon from '../assets/github.svg'
 import MacIcon from '../assets/mac.svg'
 import WindowsIcon from '../assets/windows.svg'
@@ -65,6 +66,11 @@ export default {
     this.WindowsIcon = WindowsIcon
     this.LinuxIcon = LinuxIcon
     return {}
+  },
+  methods: {
+    scrollTo (selector) {
+      scrollToElement(selector)
+    }
   }
 }
 </script>

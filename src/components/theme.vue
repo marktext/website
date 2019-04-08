@@ -1,6 +1,6 @@
 <template>
   <div class="theme">
-    <h2 class="slogan">{ Themes }</h2>
+    <h2 class="slogan" id="themes">{ Themes }</h2>
     <img src="../assets/notes.image.svg" alt="" class="bg-image">
     <div class="app-container">
       <div class="app-header">

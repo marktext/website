@@ -56,6 +56,12 @@ body {
   overflow-x: hidden;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
