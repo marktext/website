@@ -1,4 +1,4 @@
-const style = `:root {
+:root {
   --themeColor: rgb(104, 134, 170);
   --highlightColor: rgba(104, 134, 170, .4);
   --selectionColor: rgba(0, 0, 0, .1);
@@ -52,32 +52,32 @@ const style = `:root {
 
 /* ------------------------------------ */
 
-li.paragraph {
+li.ag-paragraph {
   color: var(--editorColor);
 }
 
 /*task list*/
-li.task-list-item {
+li.ag-task-list-item {
   list-style-type: none;
   position: relative;
 }
-li.task-list-item > input[type=checkbox] {
+li.ag-task-list-item > input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 16px;
   height: 16px;
   margin: 4px 0px 0px;
-  top: -1px;
+  top: 2px;
   left: -22px;
   transform-origin: center;
   transform: rotate(-90deg);
   transition: all .2s ease;
 }
-li.task-list-item > input[checked] {
+li.ag-task-list-item > input.ag-checkbox-checked {
   transform: rotate(0);
   opacity: .5;
 }
-li.task-list-item > input[type=checkbox]::before {
+li.ag-task-list-item > input[type=checkbox]::before {
   content: '';
   width: 16px;
   height: 16px;
@@ -91,11 +91,11 @@ li.task-list-item > input[type=checkbox]::before {
   left: 0;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::before {
+li.ag-task-list-item > input.ag-checkbox-checked::before {
   border: transparent;
   background-color: var(--editorColor);
 }
-li.task-list-item > input::after {
+li.ag-task-list-item > input::after {
   content: '';
   transform: rotate(-45deg) scale(0);
   width: 9px;
@@ -109,12 +109,12 @@ li.task-list-item > input::after {
   left: 5px;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::after {
+li.ag-task-list-item > input.ag-checkbox-checked::after {
   transform: rotate(-45deg) scale(1);
 }
 
 /*horizontal line*/
-p:not(.active)[data-role="hr"]::before {
+p:not(.ag-active)[data-role="hr"]::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -126,6 +126,3 @@ p:not(.active)[data-role="hr"]::before {
   border-bottom: 2px dashed var(--editorColor50);
   transform: translateX(-50%) translateY(-50%);
 }
-`
-
-export default style

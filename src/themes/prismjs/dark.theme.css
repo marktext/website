@@ -1,4 +1,3 @@
-const style = `
 /*
  * ------------------------------------
  * Prism.js dark theme
@@ -125,6 +124,3 @@ pre.ag-paragraph {
 .token.entity {
   cursor: help;
 }
-`
-
-export default style

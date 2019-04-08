@@ -63,6 +63,38 @@ body {
   overflow: hidden;
 }
 
+.display {
+  pointer-events: none;
+}
+
+.display #ag-editor-id {
+  padding: 0 20px;
+  font-size: 14px;
+  user-select: none;
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin: .5em 0;
+  }
+  & input[type=checkbox] {
+    top: 0;
+  }
+  & .ag-front-icon {
+    display: none;
+  }
+  & pre.ag-fence-code {
+    padding: .5em;
+    margin: .5em 0 0 0;
+    font-size: 80%;
+  }
+  & figure.ag-paragraph {
+    margin: .5em 0 0 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

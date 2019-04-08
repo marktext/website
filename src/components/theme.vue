@@ -9,7 +9,7 @@
         <span class="dot green"></span>
         <span class="feature-name">{{currentTheme.name}}</span>
       </div>
-      <div ref="editor"></div>
+      <div ref="editor" class="display"></div>
     </div>
     <div class="theme-list">
       <div class="light-themes">
@@ -44,9 +44,7 @@ import themeMd from 'markdown/themes.md'
 import Muya from 'muya/lib'
 import { addThemeStyle } from '../utils/theme.js'
 
-import 'katex/dist/katex.min.css'
-
-console.log(themeMd)
+import 'muya/themes/default.css'
 
 const lightThemes = [{
   name: 'Cadmium Light',
@@ -92,6 +90,8 @@ export default {
       this.editor = new Muya(ele, {
         markdown: this.themeMd
       })
+      this.editor.blur()
+      this.editor.container.setAttribute('contenteditable', false)
     })
   },
   methods: {
@@ -103,7 +103,6 @@ export default {
 }
 </script>
 <style scoped>
-  @import url(../themes/default.css);
   .theme {
     width: 100vw;
     height: 100vh;
@@ -180,7 +179,7 @@ export default {
     justify-content: space-around;
   }
   .theme-list li {
-    width: 150px;
+    width: 160px;
     height: 40px;
     padding: 5px 8px 5px 30px;
     margin-right: 20px;

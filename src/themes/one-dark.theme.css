@@ -1,4 +1,4 @@
-const style = `:root {
+:root {
   /*editor*/
   --themeColor: #e2c08d;
   --highlightColor: #ffffff10;
@@ -144,23 +144,23 @@ li.ag-task-list-item {
   list-style-type: none;
   position: relative;
 }
-li.task-list-item > input[type=checkbox] {
+li.ag-task-list-item > input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 16px;
   height: 16px;
   margin: 4px 0px 0px;
-  top: -1px;
+  top: 2px;
   left: -22px;
   transform-origin: center;
   transform: rotate(-90deg);
   transition: all .2s ease;
 }
-li.task-list-item > input[checked] {
+li.ag-task-list-item > input.ag-checkbox-checked {
   transform: rotate(0);
   opacity: .6;
 }
-li.task-list-item > input[type=checkbox]::before {
+li.ag-task-list-item > input[type=checkbox]::before {
   content: '';
   width: 16px;
   height: 16px;
@@ -174,11 +174,11 @@ li.task-list-item > input[type=checkbox]::before {
   left: 0;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::before {
+li.ag-task-list-item > input.ag-checkbox-checked::before {
   border: transparent;
   background-color: var(--editorColor);
 }
-li.task-list-item > input::after {
+li.ag-task-list-item > input::after {
   content: '';
   transform: rotate(-45deg) scale(0);
   width: 9px;
@@ -192,7 +192,7 @@ li.task-list-item > input::after {
   left: 5px;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::after {
+li.ag-task-list-item > input.ag-checkbox-checked::after {
   transform: rotate(-45deg) scale(1);
 }
 
@@ -203,6 +203,3 @@ li.task-list-item > input[checked]::after {
  */
 
 /* @import url("prismjs/one-dark.theme.css"); */
-`
-
-export default style

@@ -1,4 +1,4 @@
-const style = `:root {
+:root {
   /*editor*/
   --themeColor: #f48237;
   --highlightColor: rgba(244, 130, 55, .4);
@@ -42,15 +42,15 @@ const style = `:root {
 /* ------------------------------------ */
 
 :not(pre) > code[class*="language-"],
-pre.paragraph {
+pre.ag-paragraph {
   background: var(--codeBlockBgColor) !important;
 }
 
-/*.image-marked-text::before {
+/*.ag-image-marked-text::before {
   background: url(../lib/assets/icons/image_dark.png);
 }
 
-.image-marked-text.image-fail::before {
+.ag-image-marked-text.ag-image-fail::before {
   background-image: url(../lib/assets/icons/image_dark_fail.png);
 }*/
 
@@ -61,6 +61,3 @@ pre.paragraph {
 /*
 @import url("prismjs/dark.theme.css");
 */
-`
-
-export default style

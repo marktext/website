@@ -1,4 +1,4 @@
-const style = `:root {
+:root {
   --themeColor: rgb(12, 139, 186);
   --highlightColor: rgba(12, 139, 186, .4);
   --selectionColor: rgba(0, 0, 0, .1);
@@ -42,11 +42,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-li.bullet-list-item {
+li.ag-bullet-list-item {
   position: relative;
   list-style: none;
 }
-li.bullet-list-item::before {
+li.ag-bullet-list-item::before {
   content: '';
   display: block;
   position: absolute;
@@ -57,39 +57,39 @@ li.bullet-list-item::before {
   background: var(--editorColor);
 }
 
-blockquote.paragraph {
+blockquote.ag-paragraph {
   background: rgb(233, 233, 233);
 }
-blockquote.paragraph::before {
+blockquote.ag-paragraph::before {
   content: none;
 }
 
-li.paragraph {
+li.ag-paragraph {
   color: var(--editorColor);
 }
 
 /*task list*/
-li.task-list-item {
+li.ag-task-list-item {
   list-style-type: none;
   position: relative;
 }
-li.task-list-item > input[type=checkbox] {
+li.ag-task-list-item > input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 16px;
   height: 16px;
   margin: 4px 0px 0px;
-  top: -1px;
+  top: 2px;
   left: -22px;
   transform-origin: center;
   transform: rotate(-90deg);
   transition: all .2s ease;
 }
-li.task-list-item > input[checked] {
+li.ag-task-list-item > input.ag-checkbox-checked {
   transform: rotate(0);
   opacity: .5;
 }
-li.task-list-item > input[type=checkbox]::before {
+li.ag-task-list-item > input[type=checkbox]::before {
   content: '';
   width: 16px;
   height: 16px;
@@ -103,11 +103,11 @@ li.task-list-item > input[type=checkbox]::before {
   left: 0;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::before {
+li.ag-task-list-item > input.ag-checkbox-checked::before {
   border: transparent;
   background-color: var(--editorColor);
 }
-li.task-list-item > input::after {
+li.ag-task-list-item > input::after {
   content: '';
   transform: rotate(-45deg) scale(0);
   width: 9px;
@@ -121,12 +121,12 @@ li.task-list-item > input::after {
   left: 5px;
   transition: all .2s ease;
 }
-li.task-list-item > input[checked]::after {
+li.ag-task-list-item > input.ag-checkbox-checked::after {
   transform: rotate(-45deg) scale(1);
 }
 
 /*horizontal line*/
-p:not(.active)[data-role="hr"]::before {
+p:not(.ag-active)[data-role="hr"]::before {
   content: '';
   position: absolute;
   width: 50%;
@@ -138,6 +138,3 @@ p:not(.active)[data-role="hr"]::before {
   border-bottom: 2px dashed var(--editorColor50);
   transform: translateX(-50%) translateY(-50%);
 }
-`
-
-export default style
