@@ -2,7 +2,7 @@
 
 **Strong** , *Emphasis*, `inline code`, :heart:, [Hyperlink](http://google.com), ~~Strike~~, $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$ .
 
-- [x] Contrary to popular belief.
+- [ ] Contrary to popular belief.
 
 - [x] Lorem Ipsum is not simply random text.
 

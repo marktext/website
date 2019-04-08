@@ -9,7 +9,7 @@
         <span class="dot green"></span>
         <span class="feature-name">{{currentTheme.name}}</span>
       </div>
-      <div v-html="themeHtml"></div>
+      <div v-html="themeHtml" ref="muyaContainer"></div>
     </div>
     <div class="theme-list">
       <div class="light-themes">
@@ -41,8 +41,9 @@
 </template>
 <script>
 import themeMd from 'markdown/themes.md'
-import ExportHtml from 'muya/lib/utils/exportHtml.js'
+import mermaid from 'mermaid'
 import { addThemeStyle } from '../utils/theme.js'
+import markdownToHtml from '../utils/markdownToHtml.js'
 
 import 'katex/dist/katex.min.css'
 import 'themes/default.css'
@@ -78,7 +79,7 @@ const darkThemes = [{
 export default {
   name: 'Theme',
   data () {
-    this.themeHtml = `<article class="markdown-body">${new ExportHtml(themeMd).renderHtml()}</article>`
+    this.themeHtml = markdownToHtml(themeMd)
     this.darkThemes = darkThemes
     this.lightThemes = lightThemes
     return {
@@ -86,9 +87,30 @@ export default {
     }
   },
   created () {
+    this.$nextTick(() => {
+      const codes = this.$refs.muyaContainer.querySelectorAll('code.language-mermaid')
+      for (const code of codes) {
+        const preEle = code.parentNode
+        const mermaidContainer = document.createElement('div')
+        mermaidContainer.innerHTML = code.innerHTML
+        mermaidContainer.classList.add('mermaid')
+        preEle.replaceWith(mermaidContainer)
+      }
+      mermaid.init({
+      }, this.$refs.muyaContainer.querySelectorAll('div.mermaid'))
+    })
   },
   methods: {
     selectTheme (theme) {
+      if (/dark/i.test(theme.label)) {
+        mermaid.initialize({
+          theme: 'dark'
+        })
+      } else {
+        mermaid.initialize({
+          theme: 'default'
+        })
+      }
       addThemeStyle(theme.label)
       this.currentTheme = theme
     }
@@ -111,44 +133,6 @@ export default {
     position: absolute;
     right: 320px;
     top: 100px;
-  }
-  .app-container {
-    width: 600px;
-    height: 500px;
-    background: var(--editorBgColor);
-    color: var(--editorColor);
-    border-radius: 5px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
-  }
-  .app-container .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-  }
-  .dot.red {
-    background: rgb(238, 106, 95);
-    left: 10px;
-  }
-
-  .dot.orange {
-    background: rgb(246, 193, 80);
-    left: 32px;
-  }
-
-  .dot.green {
-    background: rgb(100, 202, 87);
-    left: 54px;
-  }
-
-  .app-header {
-    position: relative;
-    height: 32px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 32px;
   }
   .theme-list {
     padding: 150px 50px 0 50px;

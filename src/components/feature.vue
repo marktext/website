@@ -21,7 +21,7 @@
             <span class="dot green"></span>
             <span class="feature-name">{{selectedFeature.title}}</span>
           </div>
-          <img :src="selectedFeature.img" alt="">
+          <div v-html="selectedFeature.html" ref="muyaContainer"></div>
         </div>
       </div>
     </div>
@@ -29,32 +29,34 @@
 </template>
 
 <script>
-import tableImage from '../assets/features/table-block.png'
-import emojiImage from '../assets/features/emoji.png'
-import inlineImage from '../assets/features/inline-format.png'
-import mathImage from '../assets/features/math.png'
-import codeImage from '../assets/features/code-block.png'
+import mermaid from 'mermaid'
+import tableMd from 'markdown/table.md'
+import diagramMd from 'markdown/diagram.md'
+import inlineFormatsMd from 'markdown/inlineFormats.md'
+import mathFormulaMd from 'markdown/mathFormula.md'
+import codeBlockMd from 'markdown/codeBlock.md'
+import markdownToHtml from '../utils/markdownToHtml.js'
 
 const features = [{
   title: 'Table Block',
   description: 'Support GFM table block, you can remove/add rows and columns.',
-  img: tableImage
+  html: markdownToHtml(tableMd)
 }, {
-  title: 'Emoji',
-  description: 'Support GFM extention emoji, type :emoji: and auto-coplete.',
-  img: emojiImage
+  title: 'Diagram',
+  description: 'Support Flowchart, Sequence diagram, Gantt diagram, Vega chart.',
+  html: markdownToHtml(diagramMd)
 }, {
   title: 'Inline Formats',
   description: 'Support CommonMark and GitHub Flavored Markdown Spec.',
-  img: inlineImage
+  html: markdownToHtml(inlineFormatsMd)
 }, {
   title: 'Math Fomula',
   description: 'Markdown extensions math expressions (KaTeX)',
-  img: mathImage
+  html: markdownToHtml(mathFormulaMd)
 }, {
   title: 'Code Block',
   description: 'Support GFM code fense, highlight by prismjs.',
-  img: codeImage
+  html: markdownToHtml(codeBlockMd)
 }]
 
 export default {
@@ -68,6 +70,23 @@ export default {
   methods: {
     select (feature) {
       this.selectedFeature = feature
+      if (feature.title === 'Diagram') {
+        this.$nextTick(() => {
+          this.renderMermaid()
+        })
+      }
+    },
+    renderMermaid () {
+      const codes = this.$refs.muyaContainer.querySelectorAll('code.language-mermaid')
+      for (const code of codes) {
+        const preEle = code.parentNode
+        const mermaidContainer = document.createElement('div')
+        mermaidContainer.innerHTML = code.innerHTML
+        mermaidContainer.classList.add('mermaid')
+        preEle.replaceWith(mermaidContainer)
+      }
+      mermaid.init({
+      }, this.$refs.muyaContainer.querySelectorAll('div.mermaid'))
     }
   }
 }
@@ -83,6 +102,48 @@ export default {
   font-weight: 300;
   text-transform: uppercase;
 }
+.app-container {
+    width: 600px;
+    height: 500px;
+    background: var(--editorBgColor);
+    color: var(--editorColor);
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+    overflow: hidden;
+  }
+  .app-container .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+  }
+  .dot.red {
+    background: rgb(238, 106, 95);
+    left: 10px;
+  }
+
+  .dot.orange {
+    background: rgb(246, 193, 80);
+    left: 32px;
+  }
+
+  .dot.green {
+    background: rgb(100, 202, 87);
+    left: 54px;
+  }
+
+  .app-header {
+    position: relative;
+    height: 32px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 32px;
+  }
+  .app-container article.markdown-body p img {
+    width: 100%;
+  }
 </style>
 
 <style scoped>
@@ -136,49 +197,6 @@ export default {
     width: 600px;
     margin-right: 50px;
     height: 100vh;
-  }
-
-  .app-container {
-    width: 600px;
-    height: 500px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
-  }
-  .app-container img {
-    margin-left: 25px;
-    margin-top: 50px;
-    width: 550px;
-  }
-  .app-container .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-  }
-  .dot.red {
-    background: rgb(238, 106, 95);
-    left: 10px;
-  }
-
-  .dot.orange {
-    background: rgb(246, 193, 80);
-    left: 32px;
-  }
-
-  .dot.green {
-    background: rgb(100, 202, 87);
-    left: 54px;
-  }
-
-  .app-header {
-    position: relative;
-    height: 32px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 32px;
   }
 </style>
 
