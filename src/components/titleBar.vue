@@ -22,7 +22,7 @@
         <div class="slogan-text">Simple and Elegant Markdown Editor</div>
         <div class="slogan-text">Focused on speed and usability.</div>
         <div class="download-group">
-          <div class="download-info">Available for maxOs, Windows and Linux.</div>
+          <div class="download-info">Available for maxOS, Windows and Linux.</div>
           <div class="button-group">
             <a href="https://github.com/marktext/marktext/releases" target="_blank">
               <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">

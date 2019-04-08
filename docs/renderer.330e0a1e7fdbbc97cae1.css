@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
-.title-bar[data-v-c731ec42] {
+.title-bar[data-v-d659dc82] {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -9,11 +9,11 @@
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: Gradient-data-v-c731ec42 15s ease infinite;
-          animation: Gradient-data-v-c731ec42 15s ease infinite;
+  -webkit-animation: Gradient-data-v-d659dc82 15s ease infinite;
+          animation: Gradient-data-v-d659dc82 15s ease infinite;
   overflow: hidden;
 }
-.nav[data-v-c731ec42] {
+.nav[data-v-d659dc82] {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.nav h1[data-v-c731ec42] {
+.nav h1[data-v-d659dc82] {
   font-size: 30px;
   color: #000;
   margin-left: 30px;
@@ -40,12 +40,12 @@
           align-items: center;
   font-family: 'Roboto';
 }
-.nav img[data-v-c731ec42] {
+.nav img[data-v-d659dc82] {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
-.nav .nav-group[data-v-c731ec42] {
+.nav .nav-group[data-v-d659dc82] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +55,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a[data-v-c731ec42] {
+.nav .nav-group a[data-v-d659dc82] {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   text-decoration: none;
   color: #333;
@@ -73,21 +73,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a svg[data-v-c731ec42] {
+.nav .nav-group a svg[data-v-d659dc82] {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
-.nav .nav-group a[data-v-c731ec42]:hover {
+.nav .nav-group a[data-v-d659dc82]:hover {
   color: var(--themeColor);
 }
-.title-content[data-v-c731ec42] {
+.title-content[data-v-d659dc82] {
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.des[data-v-c731ec42] {
+.des[data-v-d659dc82] {
   width: 60vw;
   margin-top: 180px;
   padding: 50px 100px;
@@ -96,23 +96,23 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.des .slogan-text[data-v-c731ec42] {
+.des .slogan-text[data-v-d659dc82] {
   text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
 }
-.des div[data-v-c731ec42]:first-of-type {
+.des div[data-v-d659dc82]:first-of-type {
   font-size: 40px;
 }
-.des div[data-v-c731ec42] {
+.des div[data-v-d659dc82] {
   margin-bottom: 10px;
   font-size: 35px;
 }
-.des .download-group[data-v-c731ec42] {
+.des .download-group[data-v-d659dc82] {
   margin-top: 100px;
 }
-.des .download-group .download-info[data-v-c731ec42] {
+.des .download-group .download-info[data-v-d659dc82] {
   font-size: 16px;
 }
-.des .download-group a[data-v-c731ec42] {
+.des .download-group a[data-v-d659dc82] {
   text-decoration: none;
   width: 120px;
   height: 40px;
@@ -129,28 +129,28 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.des .download-group a[data-v-c731ec42]:hover {
+.des .download-group a[data-v-d659dc82]:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
-.des .download-group a svg[data-v-c731ec42] {
+.des .download-group a svg[data-v-d659dc82] {
   width: 30px;
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
 }
-.image[data-v-c731ec42] {
+.image[data-v-d659dc82] {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding-top: 150px;
 }
-.image img[data-v-c731ec42] {
+.image img[data-v-d659dc82] {
   width: 450px;
   height: 450px;
 }
-.button-group[data-v-c731ec42] {
+.button-group[data-v-d659dc82] {
   margin-top: 20px;
   width: 400px;
   display: -webkit-box;
@@ -160,7 +160,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@-webkit-keyframes Gradient-data-v-c731ec42 {
+@-webkit-keyframes Gradient-data-v-d659dc82 {
 0% {
     background-position: 0% 50%
 }
@@ -171,7 +171,7 @@
     background-position: 0% 50%
 }
 }
-@keyframes Gradient-data-v-c731ec42 {
+@keyframes Gradient-data-v-d659dc82 {
 0% {
     background-position: 0% 50%
 }
@@ -1017,4 +1017,4 @@ body {
 }
 
 
-/*# sourceMappingURL=renderer.6820f05134d151494e20.css.map*/
+/*# sourceMappingURL=renderer.330e0a1e7fdbbc97cae1.css.map*/
