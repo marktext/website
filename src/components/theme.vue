@@ -194,6 +194,19 @@ export default {
     left: 5px;
     top: 10px;
   }
+  .theme-list li.active > span:first-of-type::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 4px;
+    border: 2px solid #fff;
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);
+  }
 </style>
 
 
