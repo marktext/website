@@ -29,6 +29,9 @@ const rendererConfig = {
     path: path.join(__dirname, 'docs'),
     publicPath: proMode ? 'https://marktext.app/' : '/'
   },
+  devServer: {
+    contentBase: './src/assets/'
+  },
   module: {
     rules: [
       {
