@@ -42,6 +42,7 @@
 <script>
 import html from './article.html'
 import { addThemeStyle } from '../utils/theme.js'
+
 import 'katex/dist/katex.min.css'
 
 const lightThemes = [{
@@ -91,7 +92,6 @@ export default {
 }
 </script>
 <style scoped>
-  @import url("../themes/default.css");
   .theme {
     width: 100vw;
     height: 100vh;

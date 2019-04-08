@@ -1,0 +1,20 @@
+{
+  "comments": false,
+  "env": {
+    "renderer": {
+      "presets": [
+        ["env", {
+          "modules": false,
+          "useBuiltIns": true,
+          "targets": {
+            "browsers": [
+              "Chrome >= 66"
+            ]
+          }
+        }],
+        "stage-0"
+      ]
+    }
+  },
+  "plugins": ["transform-runtime"]
+}
