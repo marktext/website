@@ -10,7 +10,9 @@
         <a href="javascript:;">Themes</a>
         <a href="javascript:;">Sponsors</a>
         <a href="https://github.com/marktext/marktext" target="_blank">
-          <img src="../assets/github.svg" alt="">
+          <svg :viewBox="GitHubIcon.viewBox" aria-hidden="true" class="icon">
+            <use :xlink:href="GitHubIcon.url" />
+          </svg>
           <span>GitHub</span>
         </a>
       </div>
@@ -23,31 +25,45 @@
           <div class="download-info">Available for maxOs, Windows and Linux.</div>
           <div class="button-group">
             <a href="https://github.com/marktext/marktext/releases" target="_blank">
-              <img src="../assets/mac.svg" alt="">
+              <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
+                <use :xlink:href="MacIcon.url" />
+              </svg>
               <span>macOs</span>
             </a>
             <a href="https://github.com/marktext/marktext/releases" target="_blank">
-              <img src="../assets/windows.svg" alt="">
+              <svg :viewBox="WindowsIcon.viewBox" aria-hidden="true" class="icon">
+                <use :xlink:href="WindowsIcon.url" />
+              </svg>
               <span>Windows</span>
             </a>
             <a href="https://github.com/marktext/marktext/releases" target="_blank">
-              <img src="../assets/linux.svg" alt="">
+              <svg :viewBox="LinuxIcon.viewBox" aria-hidden="true" class="icon">
+                <use :xlink:href="LinuxIcon.url" />
+              </svg>
               <span>Linux</span>
             </a>
           </div>
         </div>
       </div>
       <div class="image">
-        <img src="../assets/drink_coffee.svg" alt="">
+        <img src="../assets/drink_coffee.image.svg" alt="">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import GitHubIcon from '../assets/github.svg'
+import MacIcon from '../assets/mac.svg'
+import WindowsIcon from '../assets/windows.svg'
+import LinuxIcon from '../assets/linux.svg'
 export default {
   name: 'TitleBar',
   data () {
+    this.GitHubIcon = GitHubIcon
+    this.MacIcon = MacIcon
+    this.WindowsIcon = WindowsIcon
+    this.LinuxIcon = LinuxIcon
     return {}
   }
 }
@@ -110,7 +126,7 @@ export default {
     display: flex;
     align-items: center;
   }
-  .nav .nav-group a img {
+  .nav .nav-group a svg {
     width: 30px;
     height: 30px;
     margin-right: 10px;
@@ -162,7 +178,7 @@ export default {
   .des .download-group a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
   }
-  .des .download-group a img {
+  .des .download-group a svg {
     width: 30px;
     height: 30px;
     margin-left: 5px;

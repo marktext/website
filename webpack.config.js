@@ -24,8 +24,10 @@ const rendererConfig = {
   externals: [
     ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
   ],
-  devServer: {
-    contentBase: './docs'
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, 'docs'),
+    publicPath: proMode ? 'https://marktext.github.io/website' : '/'
   },
   module: {
     rules: [
@@ -88,6 +90,7 @@ const rendererConfig = {
       },
       {
         test: /\.svg$/,
+        exclude: /\.image\.svg$/,
         use: [
           {
             loader: 'svg-sprite-loader',
@@ -100,7 +103,7 @@ const rendererConfig = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        test: /\.(image\.svg|png|jpe?g|gif)(\?.*)?$/,
         use: {
           loader: 'url-loader',
           query: {
@@ -122,7 +125,7 @@ const rendererConfig = {
         use: {
           loader: 'url-loader',
           query: {
-            limit: 100000,
+            limit: 100,
             name: 'fonts/[name]--[folder].[ext]'
           }
         }
@@ -150,11 +153,6 @@ const rendererConfig = {
     new webpack.NoEmitOnErrorsPlugin(),
     new VueLoaderPlugin()
   ],
-  output: {
-    filename: '[name].js',
-    path: path.join(__dirname, './docs'),
-    publicPath: proMode ? 'https://marktext.github.io/website' : './'
-  },
   resolve: {
     alias: {
       'components': path.join(__dirname, './src/components'),

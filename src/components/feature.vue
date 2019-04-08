@@ -91,7 +91,7 @@ export default {
     width: 100vw;
     height: 100vh;
     background: rgba(245, 245, 245, .6);
-    background-image: url(../assets/developing_code.svg);
+    background-image: url(../assets/developing_code.image.svg);
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: 400px 400px;

@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="container hero">
     <div class="inner">
-      <img src="../assets/new_message.svg" alt="">
+      <img src="../assets/new_message.image.svg" alt="">
       <h1>&lt; Have Something to say? /&gt;</h1>
       <p>
         Send us an email: <a href="mailto:ransixi@gmail.com">ransixi@gamil.com</a>
@@ -10,10 +10,14 @@
       <p class="follow">
         <span>You can also follow us by:</span>
         <a href="https://twitter.com/marktextapp">
-          <img src="../assets/twitter.svg" alt="twitter">
+          <svg :viewBox="TwitterIcon.viewBox" aria-hidden="true" class="icon">
+            <use :xlink:href="TwitterIcon.url" />
+          </svg>
         </a>
         <a href="https://github.com/marktext/marktext">
-          <img src="../assets/github.svg" alt="github">
+          <svg :viewBox="GitHubIcon.viewBox" aria-hidden="true" class="icon">
+            <use :xlink:href="GitHubIcon.url" />
+          </svg>
         </a>
       </p>
       <p class="small">All Right Reserved © 2017-2019 <a href="https://github.com/Jocs">@jocs</a></p>
@@ -27,8 +31,15 @@
 </template>
 
 <script>
+import TwitterIcon from '../assets/twitter.svg'
+import GitHubIcon from '../assets/github.svg'
 export default {
   name: 'Footer',
+  data () {
+    this.TwitterIcon = TwitterIcon
+    this.GitHubIcon = GitHubIcon
+    return {}
+  },
   created () {
     this.$nextTick(() => {
       // ===========================================
@@ -253,7 +264,7 @@ export default {
   margin: 0 5px;
 }
 
-.inner p a img {
+.inner p a svg {
   width: 100%;
   height: 100%;
 }

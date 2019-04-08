@@ -1,7 +1,7 @@
 <template>
   <div class="theme">
     <h2 class="slogan">{ Themes }</h2>
-    <img src="../assets/notes.svg" alt="" class="bg-image">
+    <img src="../assets/notes.image.svg" alt="" class="bg-image">
     <div class="app-container">
       <div class="app-header">
         <span class="dot red"></span>
@@ -92,6 +92,7 @@ export default {
 }
 </script>
 <style scoped>
+  @import url(../themes/default.css);
   .theme {
     width: 100vw;
     height: 100vh;
