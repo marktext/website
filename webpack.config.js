@@ -140,6 +140,7 @@ const rendererConfig = {
     new SpritePlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
+      favicon: path.resolve(__dirname, './public/favicon.png'),
       template: path.resolve(__dirname, './public/index.html'),
       minify: {
         collapseWhitespace: true,
