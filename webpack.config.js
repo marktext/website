@@ -152,7 +152,6 @@ const rendererConfig = {
   ],
   output: {
     filename: '[name].js',
-    libraryTarget: 'commonjs2',
     path: path.join(__dirname, './docs'),
     publicPath: proMode ? 'https://marktext.github.io/website' : './'
   },

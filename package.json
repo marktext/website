@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
-    "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js && cp CNAME docs/CNAME",
+    "build": "rm -rf docs && cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js && cp CNAME docs/CNAME",
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src"
   },
   "dependencies": {
