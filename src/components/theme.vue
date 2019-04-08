@@ -7,7 +7,7 @@
         <span class="dot red"></span>
         <span class="dot orange"></span>
         <span class="dot green"></span>
-        <span class="feature-name">title</span>
+        <span class="feature-name">{{currentTheme.name}}</span>
       </div>
       <div v-html="html"></div>
     </div>

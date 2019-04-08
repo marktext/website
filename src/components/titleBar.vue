@@ -84,7 +84,6 @@ export default {
     display: flex;
     align-items: center;
     font-family: 'Roboto';
-    text-shadow: 0 12px 12px rgba(0, 0, 0, .3);
   }
   .nav img {
     width: 40px;

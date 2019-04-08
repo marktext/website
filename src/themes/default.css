@@ -201,7 +201,7 @@ table tr td:last-child {
   margin-bottom: 0;
 }
 
-span code,
+p code,
 td code,
 th code {
   background-color: var(--codeBlockBgColor);
