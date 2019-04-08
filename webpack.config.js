@@ -10,10 +10,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const SpritePlugin = require('svg-sprite-loader/plugin')
 const postcssPresetEnv = require('postcss-preset-env')
 
-const { dependencies } = require('./package.json')
+// const { dependencies } = require('./package.json')
 const proMode = process.env.NODE_ENV === 'production'
 
-const whiteListedModules = ['vue']
+// const whiteListedModules = ['vue']
 
 const rendererConfig = {
   mode: 'development',
@@ -21,9 +21,9 @@ const rendererConfig = {
   entry: {
     renderer: path.join(__dirname, './src/main.js')
   },
-  externals: [
-    ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
-  ],
+  // externals: [
+  //   ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
+  // ],
   output: {
     filename: '[name].js',
     path: path.join(__dirname, 'docs'),
@@ -48,6 +48,12 @@ const rendererConfig = {
         use: [
           'to-string-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          'raw-loader'
         ]
       },
       {
@@ -159,6 +165,7 @@ const rendererConfig = {
       'components': path.join(__dirname, './src/components'),
       'themes': path.join(__dirname, './src/themes'),
       'markdown': path.join(__dirname, './src/markdowns'),
+      'muya': path.join(__dirname, './src/muya'),
       'assets': path.join(__dirname, './src/assets')
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node']

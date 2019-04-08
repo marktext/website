@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./node_modules/prismjs2/components/prism-arff.min.js"],"names":["Prism","languages","arff","comment","string","pattern","greedy","keyword","number","punctuation"],"mappings":"4EAAAA,MAAAC,UAAAC,KAAA,CAAsBC,QAAA,MAAAC,OAAA,CAAsBC,QAAA,mCAAAC,QAAA,GAAqDC,QAAA,sCAAAC,OAAA,oBAAAC,YAAA","file":"17.js","sourceRoot":""}

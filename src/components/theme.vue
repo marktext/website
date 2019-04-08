@@ -9,7 +9,7 @@
         <span class="dot green"></span>
         <span class="feature-name">{{currentTheme.name}}</span>
       </div>
-      <div v-html="html"></div>
+      <div ref="editor"></div>
     </div>
     <div class="theme-list">
       <div class="light-themes">
@@ -40,10 +40,13 @@
   </div>
 </template>
 <script>
-import html from './article.html'
+import themeMd from 'markdown/themes.md'
+import Muya from 'muya/lib'
 import { addThemeStyle } from '../utils/theme.js'
 
 import 'katex/dist/katex.min.css'
+
+console.log(themeMd)
 
 const lightThemes = [{
   name: 'Cadmium Light',
@@ -76,12 +79,20 @@ const darkThemes = [{
 export default {
   name: 'Theme',
   data () {
-    this.html = html
+    this.themeMd = themeMd
     this.darkThemes = darkThemes
     this.lightThemes = lightThemes
     return {
       currentTheme: lightThemes[0]
     }
+  },
+  created () {
+    this.$nextTick(() => {
+      const ele = this.$refs.editor
+      this.editor = new Muya(ele, {
+        markdown: this.themeMd
+      })
+    })
   },
   methods: {
     selectTheme (theme) {
