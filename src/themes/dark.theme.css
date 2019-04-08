@@ -50,11 +50,11 @@
 }
 
 :not(pre) > code[class*="language-"],
-pre.ag-paragraph {
+pre.paragraph {
   background: var(--codeBlockBgColor) !important;
 }
 
-p:not(.ag-active)[data-role="hr"]::before {
+p:not(.active)[data-role="hr"]::before {
   border-top: 2px dashed var(--editorColor10) !important;
   background: none !important;
 }
@@ -64,4 +64,3 @@ p:not(.ag-active)[data-role="hr"]::before {
  */
 
 /* @import url("prismjs/dark.theme.css"); */
-

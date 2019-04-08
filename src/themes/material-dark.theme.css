@@ -42,15 +42,15 @@
 /* ------------------------------------ */
 
 :not(pre) > code[class*="language-"],
-pre.ag-paragraph {
+pre.paragraph {
   background: var(--codeBlockBgColor) !important;
 }
 
-/*.ag-image-marked-text::before {
+/*.image-marked-text::before {
   background: url(../lib/assets/icons/image_dark.png);
 }
 
-.ag-image-marked-text.ag-image-fail::before {
+.image-marked-text.image-fail::before {
   background-image: url(../lib/assets/icons/image_dark_fail.png);
 }*/
 
