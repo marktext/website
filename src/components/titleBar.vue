@@ -28,7 +28,7 @@
               <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="MacIcon.url" />
               </svg>
-              <span>macOs</span>
+              <span>macOS</span>
             </a>
             <a href="https://github.com/marktext/marktext/releases" target="_blank">
               <svg :viewBox="WindowsIcon.viewBox" aria-hidden="true" class="icon">
