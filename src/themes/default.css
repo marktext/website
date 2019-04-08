@@ -203,6 +203,7 @@ table tr td:last-child {
   margin-bottom: 0;
 }
 
+p code,
 span code,
 td code,
 th code {
@@ -215,6 +216,11 @@ th code {
   margin: 0;
   padding: 0.2em 0.4em;
   color: var(--editorColor);
+}
+
+th[align=center],
+td[align=center] {
+  text-align: center;
 }
 
 :not(pre) > code[class*="language-"],
