@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
-.title-bar[data-v-1ebb0bcb] {
+.title-bar[data-v-64057ba3] {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -9,11 +9,11 @@
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: Gradient-data-v-1ebb0bcb 15s ease infinite;
-          animation: Gradient-data-v-1ebb0bcb 15s ease infinite;
+  -webkit-animation: Gradient-data-v-64057ba3 15s ease infinite;
+          animation: Gradient-data-v-64057ba3 15s ease infinite;
   overflow: hidden;
 }
-.nav[data-v-1ebb0bcb] {
+.nav[data-v-64057ba3] {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.nav h1[data-v-1ebb0bcb] {
+.nav h1[data-v-64057ba3] {
   font-size: 30px;
   color: #000;
   margin-left: 30px;
@@ -40,12 +40,12 @@
           align-items: center;
   font-family: 'Roboto';
 }
-.nav img[data-v-1ebb0bcb] {
+.nav img[data-v-64057ba3] {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
-.nav .nav-group[data-v-1ebb0bcb] {
+.nav .nav-group[data-v-64057ba3] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +55,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a[data-v-1ebb0bcb] {
+.nav .nav-group a[data-v-64057ba3] {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   text-decoration: none;
   color: #333;
@@ -73,21 +73,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a svg[data-v-1ebb0bcb] {
+.nav .nav-group a svg[data-v-64057ba3] {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
-.nav .nav-group a[data-v-1ebb0bcb]:hover {
+.nav .nav-group a[data-v-64057ba3]:hover {
   color: var(--themeColor);
 }
-.title-content[data-v-1ebb0bcb] {
+.title-content[data-v-64057ba3] {
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.des[data-v-1ebb0bcb] {
+.des[data-v-64057ba3] {
   width: 60vw;
   margin-top: 180px;
   padding: 50px 100px;
@@ -96,23 +96,23 @@
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.des .slogan-text[data-v-1ebb0bcb] {
+.des .slogan-text[data-v-64057ba3] {
   text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
 }
-.des div[data-v-1ebb0bcb]:first-of-type {
+.des div[data-v-64057ba3]:first-of-type {
   font-size: 40px;
 }
-.des div[data-v-1ebb0bcb] {
+.des div[data-v-64057ba3] {
   margin-bottom: 10px;
   font-size: 35px;
 }
-.des .download-group[data-v-1ebb0bcb] {
+.des .download-group[data-v-64057ba3] {
   margin-top: 100px;
 }
-.des .download-group .download-info[data-v-1ebb0bcb] {
+.des .download-group .download-info[data-v-64057ba3] {
   font-size: 16px;
 }
-.des .download-group a[data-v-1ebb0bcb] {
+.des .download-group a.button[data-v-64057ba3] {
   text-decoration: none;
   width: 120px;
   height: 40px;
@@ -129,28 +129,36 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.des .download-group a[data-v-1ebb0bcb]:hover {
+.des .download-group a.button[data-v-64057ba3]:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
-.des .download-group a svg[data-v-1ebb0bcb] {
+.des .download-group a.button svg[data-v-64057ba3] {
   width: 30px;
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
 }
-.image[data-v-1ebb0bcb] {
+.des div.releases[data-v-64057ba3] {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.des div.releases a[data-v-64057ba3] {
+  color: #333;
+}
+.image[data-v-64057ba3] {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding-top: 150px;
 }
-.image img[data-v-1ebb0bcb] {
+.image img[data-v-64057ba3] {
   width: 450px;
   height: 450px;
 }
-.button-group[data-v-1ebb0bcb] {
+.button-group[data-v-64057ba3] {
   margin-top: 20px;
   width: 400px;
   display: -webkit-box;
@@ -160,7 +168,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@-webkit-keyframes Gradient-data-v-1ebb0bcb {
+@-webkit-keyframes Gradient-data-v-64057ba3 {
 0% {
     background-position: 0% 50%
 }
@@ -171,7 +179,7 @@
     background-position: 0% 50%
 }
 }
-@keyframes Gradient-data-v-1ebb0bcb {
+@keyframes Gradient-data-v-64057ba3 {
 0% {
     background-position: 0% 50%
 }
@@ -1223,4 +1231,4 @@ ul, li {
 }
 
 
-/*# sourceMappingURL=renderer.666c9ed5730521efbb31.css.map*/
+/*# sourceMappingURL=renderer.e831c17ec5c2d65667a0.css.map*/

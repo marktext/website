@@ -22,26 +22,29 @@
         <div class="slogan-text">Simple and Elegant Markdown Editor</div>
         <div class="slogan-text">Focused on speed and usability.</div>
         <div class="download-group">
-          <div class="download-info">Available for maxOS, Windows and Linux.</div>
+          <div class="download-info">Available for macOS, Windows and Linux.</div>
           <div class="button-group">
-            <a href="https://github.com/marktext/marktext/releases" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-0.14.0.dmg" target="_blank">
               <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="MacIcon.url" />
               </svg>
               <span>macOS</span>
             </a>
-            <a href="https://github.com/marktext/marktext/releases" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-setup-0.14.0.exe" target="_blank">
               <svg :viewBox="WindowsIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="WindowsIcon.url" />
               </svg>
               <span>Windows</span>
             </a>
-            <a href="https://github.com/marktext/marktext/releases" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-0.14.0-x86_64.AppImage" target="_blank">
               <svg :viewBox="LinuxIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="LinuxIcon.url" />
               </svg>
               <span>Linux</span>
             </a>
+          </div>
+          <div class="releases">
+            or see <a href="https://github.com/marktext/marktext/releases/latest">all releases</a>
           </div>
         </div>
       </div>
@@ -168,7 +171,7 @@ export default {
   .des .download-group .download-info {
     font-size: 16px;
   }
-  .des .download-group a {
+  .des .download-group a.button {
     text-decoration: none;
     width: 120px;
     height: 40px;
@@ -181,14 +184,22 @@ export default {
     display: flex;
     align-items: center;
   }
-  .des .download-group a:hover {
+  .des .download-group a.button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
   }
-  .des .download-group a svg {
+  .des .download-group a.button svg {
     width: 30px;
     height: 30px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+  .des div.releases {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .des div.releases a {
+    color: #333;
   }
   .image {
     position: relative;
