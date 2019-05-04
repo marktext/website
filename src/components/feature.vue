@@ -50,7 +50,7 @@ const features = [{
   description: 'Support CommonMark and GitHub Flavored Markdown Spec.',
   html: markdownToHtml(inlineFormatsMd)
 }, {
-  title: 'Math Fomula',
+  title: 'Math Formula',
   description: 'Markdown extensions math expressions (KaTeX)',
   html: markdownToHtml(mathFormulaMd)
 }, {
