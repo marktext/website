@@ -24,19 +24,19 @@
         <div class="download-group">
           <div class="download-info">Available for macOS, Windows and Linux.</div>
           <div class="button-group">
-            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-0.14.0.dmg" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.15.0/marktext-0.15.0.dmg" target="_blank">
               <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="MacIcon.url" />
               </svg>
               <span>macOS</span>
             </a>
-            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-setup-0.14.0.exe" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.15.0/marktext-setup-0.15.0.exe" target="_blank">
               <svg :viewBox="WindowsIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="WindowsIcon.url" />
               </svg>
               <span>Windows</span>
             </a>
-            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.14.0/marktext-0.14.0-x86_64.AppImage" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/download/v0.15.0/marktext-0.15.0-x86_64.AppImage" target="_blank">
               <svg :viewBox="LinuxIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="LinuxIcon.url" />
               </svg>
