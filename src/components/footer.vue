@@ -5,7 +5,7 @@
       <img src="../assets/new_message.image.svg" alt="">
       <h1>&lt; Have Something to say? /&gt;</h1>
       <p>
-        Send us an email: <a href="mailto:ransixi@gmail.com">ransixi@gamil.com</a>
+        Send us an email: <a href="mailto:ransixi@gmail.com">ransixi@gmail.com</a>
       </p>
       <p class="follow">
         <span>You can also follow us by:</span>
@@ -47,7 +47,7 @@ export default {
       // by Mário Duarte
       // (╭☞ ͡ ͡°͜ ʖ ͡ ͡°)╭☞
       // Thanks for stoping by, don't forget to like
-      // and follow to stay up to date with new 
+      // and follow to stay up to date with new
       // doodles and cools stuff
       // Twitter: https://twitter.com/MDesignsuk
       //  (づ｡◕‿‿◕｡)づ
@@ -129,7 +129,7 @@ export default {
       ctx.lineTo(rectX + (canvas.width - 450), rectY + 120)
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 2.2
       ctx.beginPath()
       ctx.moveTo(rectX3 + (canvas.width - 200), rectY3 - 240)
@@ -137,7 +137,7 @@ export default {
       ctx.lineTo(rectX3 + (canvas.width - 50), rectY3 + 460)
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 2.3
       ctx.beginPath()
       ctx.moveTo(rectX2 + (canvas.width - 400), rectY2 + 140)
@@ -145,7 +145,7 @@ export default {
       ctx.lineTo(rectX2 + (canvas.width - 350), rectY2 + 370)
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       //triangle group 3 ===========================================
       // triangle 3.1
       ctx.beginPath()
@@ -154,7 +154,7 @@ export default {
       ctx.lineTo(rectX3 - 100, rectY3 + (canvas.height - 120))
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 3.2
       ctx.beginPath()
       ctx.moveTo(rectX + 100, rectY + (canvas.height - 380))
@@ -162,7 +162,7 @@ export default {
       ctx.lineTo(rectX - 275, rectY + (canvas.height + 150))
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 3.3
       ctx.beginPath()
       ctx.moveTo(rectX2 - 230, rectY2 + (canvas.height - 50))
@@ -170,7 +170,7 @@ export default {
       ctx.lineTo(rectX2 + 250, rectY2 + (canvas.height + 130))
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       //triangle group 4 ===========================================
       // triangle 4.1
       ctx.beginPath()
@@ -179,7 +179,7 @@ export default {
       ctx.lineTo(rectX3 + (canvas.width - 200), rectY3 + (canvas.height + 140))
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 4.2
       ctx.beginPath()
       ctx.moveTo(rectX + (canvas.width - 100), rectY + (canvas.height - 160))
@@ -187,7 +187,7 @@ export default {
       ctx.lineTo(rectX + (canvas.width - 420), rectY + (canvas.height + 60))
       ctx.fillStyle = triangle_gradient
       ctx.fill()
-      
+
       // triangle 4.3
       ctx.beginPath()
       ctx.moveTo(rectX2 + (canvas.width - 320), rectY2 + (canvas.height - 200))
