@@ -94,6 +94,12 @@ export default {
     animation: Gradient 15s ease infinite;
     overflow: hidden;
   }
+  @media screen and (max-width: 768px) {
+    .title-bar {
+      width: 100vw;
+      height: auto;
+    }
+  }
   .nav {
     width: 100vw;
     position: fixed;
@@ -176,7 +182,7 @@ export default {
   .nav .nav-button:after {
     bottom: 0;
   }
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 768px) {
     .nav {
       align-items: center;
     }
@@ -290,6 +296,41 @@ export default {
     width: 400px;
     display: flex;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 768px) {
+    .title-content {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      padding-bottom: 30px;
+    }
+    .des {
+      width: auto;
+      margin-top: 30px;
+      padding: 0 30px;
+      font-size: 30px;
+    }
+    .des div:first-of-type {
+      font-size: 20px;
+    }
+    .des div {
+      font-size: 18px;
+    }
+    .des .download-group {
+      margin-top: 30px;
+    }
+    .des .download-group a.button {
+      font-size: 16px;
+    }
+    .image {
+      width: 80%;
+      max-width: 450px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+    }
   }
   @keyframes Gradient {
     0% {
