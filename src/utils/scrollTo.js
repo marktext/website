@@ -21,7 +21,7 @@ const animatedScrollTo = function (element, to, duration, callback) {
     const now = +new Date()
     const val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration))
     if (lastpos) {
-      if (lastpos === element.scrollTop) {
+      if (lastpos === Math.ceil(element.scrollTop)) {
         lastpos = val
         element.scrollTop = val
       } else {
