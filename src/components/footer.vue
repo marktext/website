@@ -20,7 +20,7 @@
           </svg>
         </a>
       </p>
-      <p class="small">All Right Reserved © 2017-2019 <a href="https://github.com/Jocs">@jocs</a></p>
+      <p class="small">All Right Reserved © 2017-2020 <a href="https://github.com/Jocs">@jocs</a></p>
     </div>
     <div class="overlay"></div>
     <div class="background">
