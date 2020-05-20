@@ -2,7 +2,7 @@
 
 | **Inline Syntax** | **Syntax**                                                                         | Preview                                                                      |
 | ----------------- |:----------------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
-| **Strong**        | \*\*String**                                                                       | **Strong**                                                                   |
+| **Strong**        | \*\*Strong**                                                                       | **Strong**                                                                   |
 | **Emphasis**      | \*Emphasis*                                                                        | *Emphasis*                                                                   |
 | **Inline Code**   | \`yarn add muya`                                                                   | `yarn add muya`                                                              |
 | **Inline Math**   | \$a \ne b$                                                                         | $a \ne b$                                                                    |
