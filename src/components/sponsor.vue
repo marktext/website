@@ -3,6 +3,19 @@
     <div class="section-container">
       <h2 class="slogan" id="sponsors">$$ Sponsor $$</h2>
       <div class="sponsors">
+        <h4>Friendship sponsor</h4>
+        <ul class="sponsors-list">
+          <li class="square" v-for="sponsor of specialSponsors" :key="sponsor.name">
+            <a :href="sponsor.link">
+              <img :src="sponsor.logo" :alt="sponsor.name">
+            </a>
+          </li>
+          <a href="https://opencollective.com/marktext#platinum-sponsors">
+            <svg :viewBox="addIcon.viewBox" aria-hidden="true" class="icon">
+              <use :xlink:href="addIcon.url" />
+            </svg>
+          </a>
+        </ul>
         <h4>Platinum Sponsors</h4>
         <ul class="sponsors-list">
           <li v-for="sponsor of platinumSponsors" :key="sponsor.name">
@@ -73,6 +86,11 @@ const platinumSponsors = [{
   link: 'https://qordoba.com',
   logo: qordobaLogo
 }]
+const specialSponsors = [{
+  name: '多吉搜索',
+  link: 'https://www.dogedoge.com/',
+  logo: 'https://www.dogedoge.com/assets/new_logo.min.png'
+}]
 export default {
   name: 'Sponsor',
   data () {
@@ -80,6 +98,7 @@ export default {
     this.openColIcon = openColIcon
     this.colTextIcon = colTextIcon
     this.platinumSponsors = platinumSponsors
+    this.specialSponsors = specialSponsors
     return {}
   }
 }
@@ -125,10 +144,15 @@ export default {
   }
   .sponsors-list {
     display: flex;
+
     & li {
       width: 220px;
       height: 75px;
       margin-right: 20px;
+
+      &.square {
+       width: 75px;
+     }
       & a img {
         width: 100%;
         height: 100%;
