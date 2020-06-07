@@ -1,6 +1,6 @@
 <template>
   <div class="title-bar">
-    <div class="nav">
+    <div class="nav" :class="{ 'is-open':isOpenNav }">
       <h1>
         <img src="../assets/logo.png" alt="marktext">
         Mark Text
@@ -16,6 +16,7 @@
           <span>GitHub</span>
         </a>
       </div>
+      <button class="nav-button" @click="isOpenNav = !isOpenNav"></button>
     </div>
     <div class="title-content">
       <div class="des">
@@ -68,7 +69,9 @@ export default {
     this.MacIcon = MacIcon
     this.WindowsIcon = WindowsIcon
     this.LinuxIcon = LinuxIcon
-    return {}
+    return {
+      isOpenNav: false
+    }
   },
   methods: {
     scrollTo (selector) {
@@ -90,6 +93,12 @@ export default {
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     overflow: hidden;
+  }
+  @media screen and (max-width: 768px) {
+    .title-bar {
+      width: 100vw;
+      height: auto;
+    }
   }
   .nav {
     width: 100vw;
@@ -142,6 +151,78 @@ export default {
   }
   .nav .nav-group a:hover {
     color: var(--themeColor);
+  }
+  .nav .nav-button {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    background: linear-gradient(to bottom, #000, #000) no-repeat center;
+    background-size: 100% 20%;
+    transition: background-size .3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+  }
+  .nav .nav-button:before,
+  .nav .nav-button:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #000;
+    transition: transform .3s ease-in-out;
+  }
+  .nav .nav-button:before {
+    top: 0;
+  }
+  .nav .nav-button:after {
+    bottom: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .nav {
+      align-items: center;
+    }
+    .nav h1 {
+      font-size: 18px;
+      margin-left: 15px;
+    }
+    .nav img {
+      margin-right: 15px;
+    }
+    .nav .nav-group {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      background: rgba(255, 255, 255, .5);
+    }
+    .nav .nav-group a {
+      padding: 5px 15px;
+      height: 60px;
+      margin-right: 0;
+    }
+    .nav.is-open .nav-group {
+      display: block;
+    }
+    .nav .nav-button {
+      display: block;
+    }
+    .nav.is-open .nav-button {
+      background-size: 0 0;
+    }
+    .nav.is-open .nav-button:before {
+      transform: translateY(200%) rotate(45deg);
+    }
+    .nav.is-open .nav-button:after {
+      transform: translateY(-200%) rotate(-45deg);
+    }
   }
   .title-content {
     margin-top: 60px;
@@ -215,6 +296,41 @@ export default {
     width: 400px;
     display: flex;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 768px) {
+    .title-content {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      padding-bottom: 30px;
+    }
+    .des {
+      width: auto;
+      margin-top: 30px;
+      padding: 0 30px;
+      font-size: 30px;
+    }
+    .des div:first-of-type {
+      font-size: 20px;
+    }
+    .des div {
+      font-size: 18px;
+    }
+    .des .download-group {
+      margin-top: 30px;
+    }
+    .des .download-group a.button {
+      font-size: 16px;
+    }
+    .image {
+      width: 80%;
+      max-width: 450px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+    }
   }
   @keyframes Gradient {
     0% {

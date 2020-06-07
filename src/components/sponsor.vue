@@ -114,6 +114,13 @@ export default {
   display: flex;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    max-height: none;
+    margin: 0;
+  }
+}
 </style>
 
 
@@ -125,6 +132,12 @@ export default {
     display: flex;
     overflow: hidden;
     position: relative;
+  }
+  @media screen and (max-width: 768px) {
+    .sponsor {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   h4,
@@ -180,10 +193,32 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .sponsors-list {
+      display: block;
+      padding-left: 0;
+      & li {
+        margin: 0 auto;
+      }
+      & > a {
+        margin: 0 auto;
+      }
+    }
+  }
   .sponsors {
     min-width: 600px;
     & h5 {
       margin-top: 60px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .sponsors {
+      min-width: auto;
+      padding: 0 30px;
+      text-align: center;
+    }
+    .sponsors > a {
+      display: inline-block;
     }
   }
   .ask-sponsor {
@@ -191,6 +226,12 @@ export default {
     flex: 0;
     & p {
       max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .ask-sponsor {
+      min-width: auto;
+      padding: 0 30px 60px;
     }
   }
   .button-group {
@@ -265,6 +306,18 @@ export default {
     & img {
       width: 200px;
       height: 200px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .ask-sponsor div.description {
+      flex-direction: column;
+      & > div {
+        max-width: none;
+        flex-direction: column;
+      }
+      & img {
+        position: static;
+      }
     }
   }
 </style>

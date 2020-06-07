@@ -134,6 +134,21 @@ export default {
     right: 320px;
     top: 100px;
   }
+  @media screen and (max-width: 768px) {
+    .theme {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      height: auto;
+      padding: 150px 30px 300px;
+    }
+    .theme img.bg-image {
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: 60px;
+      margin: auto;
+    }
+  }
   .theme-list {
     padding: 150px 50px 0 50px;
     flex: 1;
@@ -194,6 +209,39 @@ export default {
     border-top: transparent;
     border-right: transparent;
     transform: rotate(-45deg);
+  }
+  @media screen and (max-width: 768px) {
+    .theme-list {
+      margin-bottom: 60px;
+      padding: 0;
+    }
+    .theme-list h5 {
+      font-size: 20px;
+    }
+    .light-themes {
+      margin-top: 0;
+    }
+    .dark-themes {
+      margin-top: 60px;
+    }
+    .theme-list li {
+      width: 160px;
+      height: 40px;
+      padding: 5px 8px 5px 30px;
+      margin-right: 10px;
+    }
+    .theme-list li > span:first-of-type {
+      width: 18px;
+      height: 18px;
+    }
+    .theme-list li > span {
+      font-size: 12px;
+    }
+    .theme-list li.active > span:first-of-type::before {
+      top: 6px;
+      width: 6px;
+      height: 3px;
+    }
   }
 </style>
 

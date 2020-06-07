@@ -92,17 +92,17 @@ export default {
 }
 </script>
 <style>
-.slogan {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50px;
-  color: var(--themeColor);
-  border-bottom: 2px var(--highlightColor) dashed;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.app-container {
+  .slogan {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    color: var(--themeColor);
+    border-bottom: 2px var(--highlightColor) dashed;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .app-container {
     width: 600px;
     height: 500px;
     background: var(--editorBgColor);
@@ -145,6 +145,51 @@ export default {
     width: 100%;
     border-radius: 4px;
   }
+  @media screen and (max-width: 768px) {
+    .app-container {
+      width: 100%;
+      height: 65.1vw;
+    }
+    .app-container .dot {
+      width: 1.5625vw;
+      height: 1.5625vw;
+      top: 1.3vw;
+    }
+    .dot.red {
+      left: 1.3vw;
+    }
+
+    .dot.orange {
+      background: rgb(246, 193, 80);
+      left: 4.166vw;
+    }
+
+    .dot.green {
+      background: rgb(100, 202, 87);
+      left: 7.031vw;
+    }
+
+    .app-header {
+      height: 4.166vw;
+      font-size: 1.5625vw;
+      line-height: 4.166vw;
+    }
+    .markdown-body h4 {
+      font-size: 3.125vw;
+    }
+    article.markdown-body {
+      font-size: 1.8229vw;
+    }
+    article.markdown-body p,
+    article.markdown-body span,
+    article.markdown-body code,
+    article.markdown-body table {
+      font-size: 1.8229vw;
+    }
+    article.markdown-body table tr th {
+      padding: 0.78125vw 1.6927vw;
+    }
+  }
 </style>
 
 <style scoped>
@@ -160,6 +205,13 @@ export default {
     display: flex;
     padding: 150px 100px;
     overflow: hidden;
+  }
+  @media screen and (max-width: 768px) {
+    .feature {
+      height: auto;
+      flex-direction: column;
+      padding: 150px 30px 400px;
+    }
   }
   .feature-list {
     flex: 1;
@@ -198,6 +250,25 @@ export default {
     width: 600px;
     margin-right: 50px;
     height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+    .feature-list {
+      padding: 0;
+    }
+    .feature-list li {
+      margin-bottom: 15px;
+    }
+    .feature-list .title {
+      font-size: 18px;
+    }
+    .feature-list .description {
+      font-size: 14px;
+    }
+    .feature-images {
+      width: 100%;
+      margin-right: 0;
+      height: auto;
+    }
   }
 </style>
 

@@ -319,6 +319,11 @@ export default {
 	height: 100%;
 	max-height: calc(100% - 50px);
 }
+@media screen and (max-width: 768px) {
+  .inner h1 {
+    font-size: 24px;
+  }
+}
 </style>
 
 
