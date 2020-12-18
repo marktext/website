@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "dompurify": "^1.0.10",
+    "dompurify": "^2.0.17",
     "element-resize-detector": "^1.2.0",
     "file-icons-js": "^1.0.3",
     "flowchart.js": "^1.11.3",
