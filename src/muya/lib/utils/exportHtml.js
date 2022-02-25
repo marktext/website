@@ -1,11 +1,11 @@
 import marked from '../parser/marked'
-import Prism from 'prismjs2'
+import Prism from 'prismjs'
 import katex from 'katex'
 import githubMarkdownCss from 'github-markdown-css/github-markdown.css'
-import highlightCss from 'prismjs2/themes/prism.css'
+import highlightCss from 'prismjs/themes/prism.css'
 import katexCss from 'katex/dist/katex.css'
 import { EXPORT_DOMPURIFY_CONFIG } from '../config'
-import { sanitize } from '../utils'
+import { sanitize } from './index'
 import { validEmoji } from '../ui/emojis'
 
 export const getSanitizeHtml = markdown => {
