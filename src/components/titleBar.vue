@@ -3,7 +3,7 @@
     <div class="nav" :class="{ 'is-open':isOpenNav }">
       <h1>
         <img src="../assets/logo.png" alt="marktext">
-        Mark Text
+        MarkText
       </h1>
       <div class="nav-group">
         <a href="javascript:;" @click="scrollTo('#features')">Features</a>

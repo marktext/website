@@ -15,13 +15,13 @@ f(n)
 $$
 
 ```javascript
-// Yeh, Mark Text is simple and elegant markdown editor.
+// Yeh, MarkText is simple and elegant markdown editor.
 const marktext = 'markdown editor'
 ```
 
-| name                                              | use for        |
-| :-----------------------------------------------: | :------------: |
-| [Mark Text](https://github.com/marktext/marktext) | Write markdown |
+|                       name                       | use for        |
+|:------------------------------------------------:| :------------: |
+| [MarkText](https://github.com/marktext/marktext) | Write markdown |
 
 > It has roots in a piece of classical Latin literature from 45 BC
 > 

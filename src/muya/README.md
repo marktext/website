@@ -2,7 +2,7 @@
 
 A browser based Markdown editor.
 
-**CHANGE** from muya in Mark Text
+**CHANGE** from muya in MarkText
 
 disabled `flowchart.js` `sequence` `and vega-embed`
 

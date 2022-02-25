@@ -242,7 +242,7 @@ export const MUYA_DEFAULT_OPTION = {
 }
 
 // export const DIAGRAM_TEMPLATE = {
-//   'mermaid': `graph LR;\nYou-->|Mark Text|Me;`
+//   'mermaid': `graph LR;\nYou-->|MarkText|Me;`
 // }
 
 export const isInElectron = window && window.process && window.process.type === 'renderer'
