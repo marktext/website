@@ -3,17 +3,17 @@
 **Equation Set**
 
 $$
-f(n)
+f(n) =
 \begin{cases}
-\cfrac n2, &if\ n\ is\ even\\
-3n + 1, &if\  n\ is\ odd
+\frac{n}{2} & \text{if $n$ is even,}\\
+3n + 1, & \text{if $n$ is even.}
 \end{cases}
 $$
 
 **Integration**
 
 $$
-\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t
+\sum_{i=0}^N\int_{a}^{b}g(t,i)\,\text{d}t
 $$
 
 **Sheet**
