@@ -39,7 +39,7 @@
 
       </div>
       <div class="ask-sponsor">
-        <h4>Sponsor Mark Text Development</h4>
+        <h4>Sponsor MarkText Development</h4>
         <p>Mark Text is an MIT licensed open source project, you will always be able to download the latest version from <a href="https://github.com/marktext/marktext/releases" target="_blank">GitHub release page</a>. Mark Text is still in development, and its development is inseparable from all sponsors. I hope you join them:</p>
         <div class="button-group">
           <a href="https://opencollective.com/marktext#platinum-sponsors" class="opencollective">
@@ -59,7 +59,7 @@
           <strong>What's the difference between Patreon and OpenCollective?</strong>
           <div class="description">
             <div>
-              <p>Sponsored by Patreon, goes directly to support Ran Luo's work on Mark Text. Sponsored by Open Collective, all expenses are transparent, and used for the development of Mark Text.</p>
+              <p>Sponsored by Patreon, goes directly to support Ran Luo's work on MarkText. Sponsored by Open Collective, all expenses are transparent, and used for the development of Mark Text.</p>
               <strong>We also accept <a href="https://github.com/Jocs/sponsor.me" target="_blank"> One Time Donations</a></strong>
             </div>
             <img src="../assets/do_code.image.svg" alt="" class="bg-image">

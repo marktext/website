@@ -3,7 +3,7 @@
     <div class="nav" :class="{ 'is-open':isOpenNav }">
       <h1>
         <img src="../assets/logo.png" alt="marktext">
-        Mark Text
+        MarkText
       </h1>
       <div class="nav-group">
         <a href="javascript:;" @click="scrollTo('#features')">Features</a>
@@ -25,7 +25,7 @@
         <div class="download-group">
           <div class="download-info">Available for macOS, Windows and Linux.</div>
           <div class="button-group">
-            <a class="button" href="https://github.com/marktext/marktext/releases/latest/download/marktext.dmg" target="_blank">
+            <a class="button" href="https://github.com/marktext/marktext/releases/latest/download/marktext-x64.dmg" target="_blank">
               <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
                 <use :xlink:href="MacIcon.url" />
               </svg>
