@@ -26,7 +26,7 @@ const rendererConfig = {
   // ],
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'docs'),
+    path: path.join(__dirname, 'build'),
     publicPath: proMode ? 'https://marktext.cc/' : '/'
   },
   devServer: {

@@ -45,7 +45,7 @@
             </a>
           </div>
           <div class="releases">
-            or see <a href="https://github.com/marktext/marktext/releases">all releases</a>
+            Or download on <a href="https://github.com/marktext/marktext/releases">GitHub</a> release page.
           </div>
         </div>
       </div>
@@ -275,12 +275,14 @@ export default {
     margin-right: 5px;
   }
   .des div.releases {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: 'Roboto';
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
   }
   .des div.releases a {
-    color: #333;
+    color: #666;
+    text-decoration: none;
   }
   .image {
     position: relative;

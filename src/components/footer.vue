@@ -5,10 +5,10 @@
       <img src="../assets/new_message.image.svg" alt="">
       <h1>&lt; Have Something to say? /&gt;</h1>
       <p>
-        Send us an email: <a href="mailto:ransixi@gmail.com">ransixi@gmail.com</a>
+        Send us an email <a href="mailto:ransixi@gmail.com">ransixi@gmail.com</a>
       </p>
       <p class="follow">
-        <span>You can also follow us by:</span>
+        <span>You can also follow us by</span>
         <a href="https://twitter.com/marktextapp">
           <svg :viewBox="TwitterIcon.viewBox" aria-hidden="true" class="icon">
             <use :xlink:href="TwitterIcon.url" />
@@ -20,7 +20,7 @@
           </svg>
         </a>
       </p>
-      <p class="small">All Right Reserved © 2017-2020 <a href="https://github.com/Jocs">@jocs</a></p>
+      <p class="small">All Right Reserved © 2017-Now <a href="https://github.com/Jocs">@jocs</a></p>
     </div>
     <div class="overlay"></div>
     <div class="background">
