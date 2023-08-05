@@ -48,6 +48,7 @@
             Or download on <a href="https://github.com/marktext/marktext/releases">GitHub</a> release page.
           </div>
         </div>
+        <div class="mindbox">If you're looking for a note-taking app, visit <a href="https://www.mindbox.cc">MindBox(灵感盒子)</a>.</div>
       </div>
       <div class="image">
         <img src="../assets/drink_coffee.image.svg" alt="">
@@ -94,12 +95,14 @@ export default {
     animation: Gradient 15s ease infinite;
     overflow: hidden;
   }
+
   @media screen and (max-width: 768px) {
     .title-bar {
       width: 100vw;
       height: auto;
     }
   }
+
   .nav {
     width: 100vw;
     position: fixed;
@@ -230,7 +233,7 @@ export default {
   }
   .des {
     width: 60vw;
-    margin-top: 180px;
+    margin-top: 150px;
     padding: 50px 100px;
     font-family: 'Roboto';
     font-size: 30px;
@@ -238,6 +241,16 @@ export default {
   }
   .des .slogan-text {
     text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+  }
+
+  .des .mindbox {
+    margin-top: 50px;
+    font-size: 18px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+  }
+
+  .des .mindbox a {
+    color: #6c63ff;
   }
   .des div:first-of-type {
     font-size: 40px;
@@ -247,10 +260,10 @@ export default {
     font-size: 35px;
   }
   .des .download-group {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .des .download-group .download-info {
-    font-size: 16px;
+    font-size: 18px;
   }
   .des .download-group a.button {
     text-decoration: none;
@@ -282,7 +295,6 @@ export default {
   }
   .des div.releases a {
     color: #666;
-    text-decoration: none;
   }
   .image {
     position: relative;

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
-.title-bar[data-v-4d81437a] {
+.title-bar[data-v-18a46d72] {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -9,17 +9,17 @@
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: Gradient-4d81437a 15s ease infinite;
-          animation: Gradient-4d81437a 15s ease infinite;
+  -webkit-animation: Gradient-18a46d72 15s ease infinite;
+          animation: Gradient-18a46d72 15s ease infinite;
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-.title-bar[data-v-4d81437a] {
+.title-bar[data-v-18a46d72] {
     width: 100vw;
     height: auto;
 }
 }
-.nav[data-v-4d81437a] {
+.nav[data-v-18a46d72] {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -34,7 +34,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.nav h1[data-v-4d81437a] {
+.nav h1[data-v-18a46d72] {
   font-size: 30px;
   color: #000;
   margin-left: 30px;
@@ -46,12 +46,12 @@
           align-items: center;
   font-family: 'Roboto';
 }
-.nav img[data-v-4d81437a] {
+.nav img[data-v-18a46d72] {
   width: 40px;
   height: 40px;
   margin-right: 20px;
 }
-.nav .nav-group[data-v-4d81437a] {
+.nav .nav-group[data-v-18a46d72] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +61,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a[data-v-4d81437a] {
+.nav .nav-group a[data-v-18a46d72] {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   text-decoration: none;
   color: #333;
@@ -79,15 +79,15 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.nav .nav-group a svg[data-v-4d81437a] {
+.nav .nav-group a svg[data-v-18a46d72] {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
-.nav .nav-group a[data-v-4d81437a]:hover {
+.nav .nav-group a[data-v-18a46d72]:hover {
   color: var(--themeColor);
 }
-.nav .nav-button[data-v-4d81437a] {
+.nav .nav-button[data-v-18a46d72] {
   display: none;
   position: relative;
   width: 40px;
@@ -102,8 +102,8 @@
   cursor: pointer;
   outline: none;
 }
-.nav .nav-button[data-v-4d81437a]:before,
-.nav .nav-button[data-v-4d81437a]:after {
+.nav .nav-button[data-v-18a46d72]:before,
+.nav .nav-button[data-v-18a46d72]:after {
   display: block;
   content: '';
   position: absolute;
@@ -116,26 +116,26 @@
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
-.nav .nav-button[data-v-4d81437a]:before {
+.nav .nav-button[data-v-18a46d72]:before {
   top: 0;
 }
-.nav .nav-button[data-v-4d81437a]:after {
+.nav .nav-button[data-v-18a46d72]:after {
   bottom: 0;
 }
 @media screen and (max-width: 768px) {
-.nav[data-v-4d81437a] {
+.nav[data-v-18a46d72] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
 }
-.nav h1[data-v-4d81437a] {
+.nav h1[data-v-18a46d72] {
     font-size: 18px;
     margin-left: 15px;
 }
-.nav img[data-v-4d81437a] {
+.nav img[data-v-18a46d72] {
     margin-right: 15px;
 }
-.nav .nav-group[data-v-4d81437a] {
+.nav .nav-group[data-v-18a46d72] {
     display: none;
     position: absolute;
     top: 100%;
@@ -145,61 +145,69 @@
     margin-right: 0;
     background: rgba(255, 255, 255, .5);
 }
-.nav .nav-group a[data-v-4d81437a] {
+.nav .nav-group a[data-v-18a46d72] {
     padding: 5px 15px;
     height: 60px;
     margin-right: 0;
 }
-.nav.is-open .nav-group[data-v-4d81437a] {
+.nav.is-open .nav-group[data-v-18a46d72] {
     display: block;
 }
-.nav .nav-button[data-v-4d81437a] {
+.nav .nav-button[data-v-18a46d72] {
     display: block;
 }
-.nav.is-open .nav-button[data-v-4d81437a] {
+.nav.is-open .nav-button[data-v-18a46d72] {
     background-size: 0 0;
 }
-.nav.is-open .nav-button[data-v-4d81437a]:before {
+.nav.is-open .nav-button[data-v-18a46d72]:before {
     -webkit-transform: translateY(200%) rotate(45deg);
             transform: translateY(200%) rotate(45deg);
 }
-.nav.is-open .nav-button[data-v-4d81437a]:after {
+.nav.is-open .nav-button[data-v-18a46d72]:after {
     -webkit-transform: translateY(-200%) rotate(-45deg);
             transform: translateY(-200%) rotate(-45deg);
 }
 }
-.title-content[data-v-4d81437a] {
+.title-content[data-v-18a46d72] {
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.des[data-v-4d81437a] {
+.des[data-v-18a46d72] {
   width: 60vw;
-  margin-top: 180px;
+  margin-top: 150px;
   padding: 50px 100px;
   font-family: 'Roboto';
   font-size: 30px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.des .slogan-text[data-v-4d81437a] {
+.des .slogan-text[data-v-18a46d72] {
   text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
 }
-.des div[data-v-4d81437a]:first-of-type {
+.des .mindbox[data-v-18a46d72] {
+  margin-top: 50px;
+  font-size: 18px;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+}
+.des .mindbox a[data-v-18a46d72] {
+  color: #6c63ff;
+}
+.des div[data-v-18a46d72]:first-of-type {
   font-size: 40px;
 }
-.des div[data-v-4d81437a] {
+.des div[data-v-18a46d72] {
   margin-bottom: 10px;
   font-size: 35px;
 }
-.des .download-group[data-v-4d81437a] {
-  margin-top: 100px;
+.des .download-group[data-v-18a46d72] {
+  margin-top: 50px;
 }
-.des .download-group .download-info[data-v-4d81437a] {
-  font-size: 16px;
+.des .download-group .download-info[data-v-18a46d72] {
+  font-size: 18px;
 }
-.des .download-group a.button[data-v-4d81437a] {
+.des .download-group a.button[data-v-18a46d72] {
   text-decoration: none;
   width: 120px;
   height: 40px;
@@ -216,38 +224,37 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.des .download-group a.button[data-v-4d81437a]:hover {
+.des .download-group a.button[data-v-18a46d72]:hover {
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 }
-.des .download-group a.button svg[data-v-4d81437a] {
+.des .download-group a.button svg[data-v-18a46d72] {
   width: 30px;
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
 }
-.des div.releases[data-v-4d81437a] {
+.des div.releases[data-v-18a46d72] {
   font-family: 'Roboto';
   margin-top: 20px;
   font-size: 16px;
   font-weight: 600;
 }
-.des div.releases a[data-v-4d81437a] {
+.des div.releases a[data-v-18a46d72] {
   color: #666;
-  text-decoration: none;
 }
-.image[data-v-4d81437a] {
+.image[data-v-18a46d72] {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding-top: 150px;
 }
-.image img[data-v-4d81437a] {
+.image img[data-v-18a46d72] {
   width: 450px;
   height: 450px;
 }
-.button-group[data-v-4d81437a] {
+.button-group[data-v-18a46d72] {
   margin-top: 20px;
   width: 400px;
   display: -webkit-box;
@@ -258,7 +265,7 @@
           justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
-.title-content[data-v-4d81437a] {
+.title-content[data-v-18a46d72] {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -267,36 +274,36 @@
         flex-flow: column-reverse;
     padding-bottom: 30px;
 }
-.des[data-v-4d81437a] {
+.des[data-v-18a46d72] {
     width: auto;
     margin-top: 30px;
     padding: 0 30px;
     font-size: 30px;
 }
-.des div[data-v-4d81437a]:first-of-type {
+.des div[data-v-18a46d72]:first-of-type {
     font-size: 20px;
 }
-.des div[data-v-4d81437a] {
+.des div[data-v-18a46d72] {
     font-size: 18px;
 }
-.des .download-group[data-v-4d81437a] {
+.des .download-group[data-v-18a46d72] {
     margin-top: 30px;
 }
-.des .download-group a.button[data-v-4d81437a] {
+.des .download-group a.button[data-v-18a46d72] {
     font-size: 16px;
 }
-.image[data-v-4d81437a] {
+.image[data-v-18a46d72] {
     width: 80%;
     max-width: 450px;
     margin: 0 auto;
     padding-top: 20px;
 }
-.image img[data-v-4d81437a] {
+.image img[data-v-18a46d72] {
     width: 100%;
     height: auto;
 }
 }
-@-webkit-keyframes Gradient-4d81437a {
+@-webkit-keyframes Gradient-18a46d72 {
 0% {
     background-position: 0% 50%
 }
@@ -307,7 +314,7 @@
     background-position: 0% 50%
 }
 }
-@keyframes Gradient-4d81437a {
+@keyframes Gradient-18a46d72 {
 0% {
     background-position: 0% 50%
 }
@@ -1555,4 +1562,4 @@ ul, li {
 }
 
 
-/*# sourceMappingURL=renderer.f74ca8f9134be17a8b67.css.map*/
+/*# sourceMappingURL=renderer.8546ba48eb62b25852ef.css.map*/
