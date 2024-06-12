@@ -16,7 +16,7 @@
     "fuzzaldrin": "^2.1.0",
     "github-markdown-css": "^3.0.1",
     "html-tags": "^2.0.0",
-    "katex": "^0.10.1",
+    "katex": "^0.16.10",
     "mermaid": "^8.0.0",
     "popper.js": "^1.15.0",
     "prismjs": "^1.27.0",
