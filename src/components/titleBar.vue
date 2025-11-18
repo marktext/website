@@ -45,10 +45,18 @@
             </a>
           </div>
           <div class="releases">
-            Or download on <a href="https://github.com/marktext/marktext/releases">GitHub</a> release page.
+            Or download on <a href="https://github.com/marktext/marktext/releases" target="_blank">GitHub</a> release page.
           </div>
         </div>
-        <div class="mindbox">If you're looking for a note-taking app, visit <a href="https://www.mindbox.cc">MindBox(灵感盒子)</a>.</div>
+        <div class="inkio-section">
+          <div class="inkio-text">Looking for MarkText-like editing with cloud storage? Try Inkio.</div>
+          <a class="button inkio-button" href="https://www.inkio.me" target="_blank">
+            <svg :viewBox="MacIcon.viewBox" aria-hidden="true" class="icon">
+              <use :xlink:href="MacIcon.url" />
+            </svg>
+            <span>Inkio</span>
+          </a>
+        </div>
       </div>
       <div class="image">
         <img src="../assets/drink_coffee.image.svg" alt="">
@@ -233,83 +241,119 @@ export default {
   }
   .des {
     width: 60vw;
-    margin-top: 150px;
+    margin-top: 120px;
     padding: 50px 100px;
     font-family: 'Roboto';
     font-size: 30px;
     flex-shrink: 0;
   }
+
   .des .slogan-text {
     text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+    line-height: 1.4;
   }
 
-  .des .mindbox {
-    margin-top: 50px;
-    font-size: 18px;
-    text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
-  }
-
-  .des .mindbox a {
-    color: #6c63ff;
-  }
-  .des div:first-of-type {
+  .des .slogan-text:first-of-type {
     font-size: 40px;
+    margin-bottom: 15px;
   }
-  .des div {
-    margin-bottom: 10px;
+
+  .des .slogan-text:last-of-type {
     font-size: 35px;
+    margin-bottom: 0;
   }
+
   .des .download-group {
-    margin-top: 50px;
+    margin-top: 60px;
   }
+
   .des .download-group .download-info {
     font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
   }
-  .des .download-group a.button {
+
+  /* 统一按钮样式 */
+  .des a.button {
     text-decoration: none;
     width: 120px;
     height: 40px;
-    display: inline-block;
-    line-break: 40px;
+    display: flex;
+    align-items: center;
     border-radius: 5px;
     background: #fff;
     color: #666;
     font-size: 18px;
-    display: flex;
-    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
-  .des .download-group a.button:hover {
+
+  .des a.button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    transform: translateY(-2px);
   }
-  .des .download-group a.button svg {
+
+  .des a.button svg {
     width: 30px;
     height: 30px;
     margin-left: 5px;
     margin-right: 5px;
+    flex-shrink: 0;
   }
-  .des div.releases {
+
+  .des a.button span {
+    flex: 1;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .des .releases {
     font-family: 'Roboto';
     margin-top: 20px;
     font-size: 16px;
     font-weight: 600;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .2);
   }
-  .des div.releases a {
-    color: #666;
+
+  .des .releases a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .des .releases a:hover {
+    opacity: 0.8;
+  }
+
+  .des .inkio-section {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .des .inkio-section .inkio-text {
+    font-size: 18px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.5;
   }
   .image {
     position: relative;
     flex: 1;
-    padding-top: 150px;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .image img {
     width: 450px;
     height: 450px;
-  }
-  .button-group {
-    margin-top: 20px;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
+    max-width: 100%;
   }
   @media screen and (max-width: 768px) {
     .title-content {
@@ -317,30 +361,47 @@ export default {
       flex-flow: column-reverse;
       padding-bottom: 30px;
     }
+
     .des {
       width: auto;
       margin-top: 30px;
       padding: 0 30px;
-      font-size: 30px;
     }
-    .des div:first-of-type {
+
+    .des .slogan-text:first-of-type {
+      font-size: 24px;
+    }
+
+    .des .slogan-text:last-of-type {
       font-size: 20px;
     }
-    .des div {
-      font-size: 18px;
-    }
+
     .des .download-group {
-      margin-top: 30px;
+      margin-top: 40px;
     }
-    .des .download-group a.button {
+
+    .des a.button {
       font-size: 16px;
+      width: 110px;
+      height: 36px;
     }
+
+    .button-group {
+      gap: 10px;
+    }
+
+    .des .inkio-section {
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+
     .image {
       width: 80%;
-      max-width: 450px;
+      max-width: 350px;
       margin: 0 auto;
       padding-top: 20px;
     }
+
     .image img {
       width: 100%;
       height: auto;

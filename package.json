@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
-    "build": "rm -rf build && cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js && cp src/assets/girl.jpg build/girl.jpg",
+    "dev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --open",
+    "build": "rm -rf build && cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider webpack --progress --colors --config webpack.config.js && cp src/assets/girl.jpg build/girl.jpg",
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src"
   },
   "dependencies": {

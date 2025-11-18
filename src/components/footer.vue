@@ -9,18 +9,18 @@
       </p>
       <p class="follow">
         <span>You can also follow us by</span>
-        <a href="https://twitter.com/marktextapp">
+        <a href="https://twitter.com/marktextapp" target="_blank">
           <svg :viewBox="TwitterIcon.viewBox" aria-hidden="true" class="icon">
             <use :xlink:href="TwitterIcon.url" />
           </svg>
         </a>
-        <a href="https://github.com/marktext/marktext">
+        <a href="https://github.com/marktext/marktext" target="_blank">
           <svg :viewBox="GitHubIcon.viewBox" aria-hidden="true" class="icon">
             <use :xlink:href="GitHubIcon.url" />
           </svg>
         </a>
       </p>
-      <p class="small">All Right Reserved © 2017-Now <a href="https://github.com/Jocs">@jocs</a></p>
+      <p class="small">All Right Reserved © 2017-Now <a href="https://github.com/Jocs" target="_blank">@jocs</a></p>
     </div>
     <div class="overlay"></div>
     <div class="background">
