@@ -3,21 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "http://marktext.github.io/website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "type-check": "tsc --noEmit",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "axios": "^1.6.0",
     "dompurify": "^3.0.6",
     "fuzzaldrin": "^2.1.0",
-    "gh-pages": "^6.3.0",
     "github-markdown-css": "^5.8.1",
     "html-tags": "3.3.1",
     "katex": "^0.16.9",

@@ -24,6 +24,7 @@ const markdownPlugin = () => ({
 })
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? '/website/' : '/',
   plugins: [
     react(),
     markdownPlugin(),

@@ -88,6 +88,37 @@ Run ESLint to check code quality:
 pnpm lint
 ```
 
+## 🚀 Deployment
+
+### Deploy to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+#### Setup
+
+1. Go to your repository **Settings** → **Pages**
+2. Under **Source**, select **GitHub Actions**
+3. Push to the `master` branch or manually trigger the workflow
+
+The site will be available at: `https://marktext.github.io/website/`
+
+#### Manual Deployment
+
+You can also trigger the deployment manually:
+
+1. Go to **Actions** tab in your GitHub repository
+2. Select **Deploy to GitHub Pages** workflow
+3. Click **Run workflow**
+
+#### Local Preview of Production Build
+
+To preview the production build locally before deploying:
+
+```bash
+pnpm build
+pnpm preview
+```
+
 ## 📁 Project Structure
 
 ```
