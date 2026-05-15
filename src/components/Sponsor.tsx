@@ -12,6 +12,14 @@ interface SponsorItem {
   logo: string
 }
 
+const specialSponsors: SponsorItem[] = [
+  {
+    name: 'SerpApi',
+    link: 'https://serpapi.com/?utm_source=marktext',
+    logo: 'https://raw.githubusercontent.com/marktext/marktext/develop/docs/assets/sponsors/serpapi.png'
+  }
+]
+
 const platinumSponsors: SponsorItem[] = [
   {
     name: 'readme',
@@ -31,6 +39,16 @@ const Sponsor: React.FC = () => {
       <div className="section-container">
         <h2 className="slogan" id="sponsors">$$ Sponsor $$</h2>
         <div className="sponsors">
+          <h4>Special Sponsors</h4>
+          <ul className="sponsors-list">
+            {specialSponsors.map((sponsor) => (
+              <li key={sponsor.name}>
+                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                  <img src={sponsor.logo} alt={sponsor.name} />
+                </a>
+              </li>
+            ))}
+          </ul>
           <h4>Platinum Sponsors</h4>
           <ul className="sponsors-list">
             {platinumSponsors.map((sponsor) => (
