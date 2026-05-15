@@ -24,7 +24,7 @@ const markdownPlugin = () => ({
 })
 
 export default defineConfig({
-  base: '/website/',
+  base: '/',
   plugins: [
     react(),
     markdownPlugin(),
