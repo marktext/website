@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import themeMd from '../markdowns/themes.md'
+import mermaid from 'mermaid'
 import { addThemeStyle } from '../utils/theme'
 import markdownToHtml from '../utils/markdownToHtml'
 
@@ -52,6 +53,7 @@ const darkThemes: ThemeItem[] = [
 const Theme: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeItem>(lightThemes[0])
   const [themeHtml, setThemeHtml] = useState<string>('')
+  const muyaContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -68,7 +70,29 @@ const Theme: React.FC = () => {
     }
   }, [])
 
+  useEffect(() => {
+    if (!themeHtml || !muyaContainerRef.current) return
+    const codes = muyaContainerRef.current.querySelectorAll('code.language-mermaid')
+    for (const code of codes) {
+      const preEle = code.parentNode as HTMLElement
+      const mermaidContainer = document.createElement('div')
+      mermaidContainer.innerHTML = code.innerHTML
+      mermaidContainer.classList.add('mermaid')
+      preEle.replaceWith(mermaidContainer)
+    }
+    mermaid.init({}, muyaContainerRef.current.querySelectorAll('div.mermaid'))
+  }, [themeHtml])
+
   const selectTheme = (theme: ThemeItem) => {
+    if (/dark/i.test(theme.label)) {
+      mermaid.initialize({
+        theme: 'dark'
+      })
+    } else {
+      mermaid.initialize({
+        theme: 'default'
+      })
+    }
     addThemeStyle(theme.label)
     setCurrentTheme(theme)
   }
@@ -84,7 +108,7 @@ const Theme: React.FC = () => {
           <span className="dot green"></span>
           <span className="feature-name">{currentTheme.name}</span>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: themeHtml }}></div>
+        <div dangerouslySetInnerHTML={{ __html: themeHtml }} ref={muyaContainerRef}></div>
       </div>
       <div className="theme-list">
         <div className="light-themes">
