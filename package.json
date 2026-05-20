@@ -11,9 +11,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@muyajs/core": "^0.0.39",
+    "@muyajs/core": "^0.1.0",
     "katex": "^0.16.9",
-    "mermaid": "^11.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

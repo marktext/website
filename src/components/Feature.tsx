@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
-import mermaid from 'mermaid'
+import React, { useState, useEffect } from 'react'
 import tableMd from '../markdowns/table.md'
 import diagramMd from '../markdowns/diagram.md'
 import inlineFormatsMd from '../markdowns/inlineFormats.md'
@@ -46,38 +45,6 @@ const features: FeatureItem[] = [
 const Feature: React.FC = () => {
   const [selectedFeature, setSelectedFeature] = useState<FeatureItem>(features[0])
   const [htmlContent, setHtmlContent] = useState<string>('')
-  const muyaContainerRef = useRef<HTMLDivElement>(null)
-
-  // 初始化 mermaid 配置
-  useEffect(() => {
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: 'default'
-    })
-  }, [])
-
-  const renderMermaid = async () => {
-    if (!muyaContainerRef.current) return
-
-    const codes = muyaContainerRef.current.querySelectorAll('code.language-mermaid')
-    codes.forEach((code) => {
-      const preEle = code.parentNode as HTMLElement
-      const mermaidContainer = document.createElement('div')
-      mermaidContainer.textContent = code.textContent ?? ''
-      mermaidContainer.classList.add('mermaid')
-      preEle.replaceWith(mermaidContainer)
-    })
-
-    const divs = muyaContainerRef.current.querySelectorAll<HTMLElement>('div.mermaid')
-    const unrendered = Array.from(divs).filter((d) => !d.querySelector('svg'))
-    if (unrendered.length === 0) return
-
-    try {
-      await mermaid.run({ nodes: unrendered })
-    } catch (error) {
-      console.error('Mermaid render error:', error)
-    }
-  }
 
   useEffect(() => {
     let cancelled = false
@@ -93,13 +60,6 @@ const Feature: React.FC = () => {
       cancelled = true
     }
   }, [selectedFeature])
-
-  useEffect(() => {
-    if (!htmlContent) return
-    if (selectedFeature.title === 'Diagram') {
-      void renderMermaid()
-    }
-  }, [htmlContent, selectedFeature])
 
   const handleSelect = (feature: FeatureItem) => {
     setSelectedFeature(feature)
@@ -131,10 +91,7 @@ const Feature: React.FC = () => {
               <span className="dot green"></span>
               <span className="feature-name">{selectedFeature.title}</span>
             </div>
-            <div
-              dangerouslySetInnerHTML={{ __html: htmlContent }}
-              ref={muyaContainerRef}
-            ></div>
+            <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
           </div>
         </div>
       </div>
