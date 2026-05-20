@@ -90,11 +90,11 @@ const Sponsor: React.FC = () => {
             </a>
           </div>
           <div>
-            <strong>What's the difference between Patreon and OpenCollective?</strong>
+            <strong>What&apos;s the difference between Patreon and OpenCollective?</strong>
             <div className="description">
               <div>
                 <p>
-                  Sponsored by Patreon, goes directly to support Ran Luo's work on MarkText. Sponsored by Open Collective, all expenses are transparent, and used for the development of MarkText.
+                  Sponsored by Patreon, goes directly to support Ran Luo&apos;s work on MarkText. Sponsored by Open Collective, all expenses are transparent, and used for the development of MarkText.
                 </p>
                 <strong>
                   We also accept{' '}
