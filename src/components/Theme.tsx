@@ -5,7 +5,6 @@ import { addThemeStyle } from '../utils/theme'
 import markdownToHtml from '../utils/markdownToHtml'
 
 import 'katex/dist/katex.min.css'
-import '../muya/lib/assets/styles/index.css'
 import '../themes/default.css'
 import './Theme.css'
 
@@ -51,33 +50,38 @@ const darkThemes: ThemeItem[] = [
   }
 ]
 
-const getThemeHtml = (markdown: string) => {
-  try {
-    return markdownToHtml(markdown)
-  } catch (error) {
-    console.error('Error rendering theme markdown:', error)
-    return '<p>Error rendering theme content</p>'
-  }
-}
-
 const Theme: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeItem>(lightThemes[0])
+  const [themeHtml, setThemeHtml] = useState<string>('')
   const muyaContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Initialize mermaid on mount
-    if (muyaContainerRef.current) {
-      const codes = muyaContainerRef.current.querySelectorAll('code.language-mermaid')
-      for (const code of codes) {
-        const preEle = code.parentNode as HTMLElement
-        const mermaidContainer = document.createElement('div')
-        mermaidContainer.innerHTML = code.innerHTML
-        mermaidContainer.classList.add('mermaid')
-        preEle.replaceWith(mermaidContainer)
-      }
-      mermaid.init({}, muyaContainerRef.current.querySelectorAll('div.mermaid'))
+    let cancelled = false
+    markdownToHtml(themeMd)
+      .then(html => {
+        if (!cancelled) setThemeHtml(html)
+      })
+      .catch(error => {
+        console.error('Error rendering theme markdown:', error)
+        if (!cancelled) setThemeHtml('<p>Error rendering theme content</p>')
+      })
+    return () => {
+      cancelled = true
     }
   }, [])
+
+  useEffect(() => {
+    if (!themeHtml || !muyaContainerRef.current) return
+    const codes = muyaContainerRef.current.querySelectorAll('code.language-mermaid')
+    for (const code of codes) {
+      const preEle = code.parentNode as HTMLElement
+      const mermaidContainer = document.createElement('div')
+      mermaidContainer.innerHTML = code.innerHTML
+      mermaidContainer.classList.add('mermaid')
+      preEle.replaceWith(mermaidContainer)
+    }
+    mermaid.init({}, muyaContainerRef.current.querySelectorAll('div.mermaid'))
+  }, [themeHtml])
 
   const selectTheme = (theme: ThemeItem) => {
     if (/dark/i.test(theme.label)) {
@@ -104,7 +108,7 @@ const Theme: React.FC = () => {
           <span className="dot green"></span>
           <span className="feature-name">{currentTheme.name}</span>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: getThemeHtml(themeMd) }} ref={muyaContainerRef}></div>
+        <div dangerouslySetInnerHTML={{ __html: themeHtml }} ref={muyaContainerRef}></div>
       </div>
       <div className="theme-list">
         <div className="light-themes">

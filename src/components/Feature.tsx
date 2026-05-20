@@ -5,7 +5,7 @@ import diagramMd from '../markdowns/diagram.md'
 import inlineFormatsMd from '../markdowns/inlineFormats.md'
 import mathFormulaMd from '../markdowns/mathFormula.md'
 import codeBlockMd from '../markdowns/codeBlock.md'
-import markdownToHtml from '../utils/markdownToHtml.js'
+import markdownToHtml from '../utils/markdownToHtml'
 import 'katex/dist/katex.min.css'
 import './Feature.css'
 
@@ -56,49 +56,50 @@ const Feature: React.FC = () => {
     })
   }, [])
 
-  // 延迟生成HTML，避免在模块加载时出错
-  const getHtml = (markdown: string) => {
-    try {
-      return markdownToHtml(markdown)
-    } catch (error) {
-      console.error('Error generating HTML:', error)
-      return '<p>Error rendering content</p>'
-    }
-  }
-
-  const renderMermaid = () => {
+  const renderMermaid = async () => {
     if (!muyaContainerRef.current) return
-    
+
     const codes = muyaContainerRef.current.querySelectorAll('code.language-mermaid')
-    if (codes.length === 0) return
-    
     codes.forEach((code) => {
       const preEle = code.parentNode as HTMLElement
       const mermaidContainer = document.createElement('div')
-      mermaidContainer.innerHTML = code.innerHTML
+      mermaidContainer.textContent = code.textContent ?? ''
       mermaidContainer.classList.add('mermaid')
       preEle.replaceWith(mermaidContainer)
     })
-    
-    // 使用 mermaid.run() 渲染图表
-    const mermaidDivs = muyaContainerRef.current.querySelectorAll('div.mermaid')
-    if (mermaidDivs.length > 0) {
-      mermaid.run({ nodes: Array.from(mermaidDivs) as HTMLElement[] })
+
+    const divs = muyaContainerRef.current.querySelectorAll<HTMLElement>('div.mermaid')
+    const unrendered = Array.from(divs).filter((d) => !d.querySelector('svg'))
+    if (unrendered.length === 0) return
+
+    try {
+      await mermaid.run({ nodes: unrendered })
+    } catch (error) {
+      console.error('Mermaid render error:', error)
     }
   }
 
-  // 当选中的 feature 改变时，更新 HTML 内容
   useEffect(() => {
-    const html = getHtml(selectedFeature.markdown)
-    setHtmlContent(html)
-    
-    // 如果是 Diagram，需要在 DOM 更新后初始化 mermaid
-    if (selectedFeature.title === 'Diagram') {
-      setTimeout(() => {
-        renderMermaid()
-      }, 100)
+    let cancelled = false
+    markdownToHtml(selectedFeature.markdown)
+      .then((html) => {
+        if (!cancelled) setHtmlContent(html)
+      })
+      .catch((error) => {
+        console.error('Error generating HTML:', error)
+        if (!cancelled) setHtmlContent('<p>Error rendering content</p>')
+      })
+    return () => {
+      cancelled = true
     }
   }, [selectedFeature])
+
+  useEffect(() => {
+    if (!htmlContent) return
+    if (selectedFeature.title === 'Diagram') {
+      void renderMermaid()
+    }
+  }, [htmlContent, selectedFeature])
 
   const handleSelect = (feature: FeatureItem) => {
     setSelectedFeature(feature)
