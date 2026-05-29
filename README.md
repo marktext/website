@@ -1,5 +1,8 @@
 # MarkText Website
 
+> [!IMPORTANT]
+> **This repository has been archived.** The official MarkText website has been migrated into the main [marktext/marktext](https://github.com/marktext/marktext) repository. Please file issues and contribute there going forward. This repo is kept for historical reference only and will no longer receive updates.
+
 [![Built with React](https://img.shields.io/badge/React-brightgreen?logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-purple?logo=vite&logoColor=white)](https://vitejs.dev/)
